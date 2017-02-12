@@ -28,5 +28,5 @@ In all files the field separator is " +++$+++ "
 			has to be matched with egret\_wenda_lines.txt to reconstruct the actual content
 
 # What's more
-egret\_wenda_conversations_raw.txt and egret\_wenda_conversations_raw.txt are raw data from BBS.
+**egret\_wenda_conversations_raw.txt** and **egret\_wenda_conversations_raw.txt** are raw data from BBS.
 To make it more suitable for training, I have personally reviewed the raw data and modify some utterances, such as deleting codes in utterances.
