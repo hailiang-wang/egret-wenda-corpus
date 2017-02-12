@@ -1,0 +1,15 @@
+{
+  "name": "egret_wenda_corpus",
+  "version": "1.0.0",
+  "description": "QA Corpus, based on [egret bbs](http://bbs.egret.com/).",
+  "main": "processer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "parseproxy": "^1.3.3"
+  }
+}
