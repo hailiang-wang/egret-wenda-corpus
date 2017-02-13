@@ -4249,19 +4249,15 @@
 4248 +++$+++ leasystu +++$+++ DisplayObjectContainer 宽度 高度 之类的问题
 4249 +++$+++ zcxp +++$+++ 贴一下你取这几个值的代码看一下。另外你可以装一下EgretInspector，有助于你理解egret显示列表，而且方便你查看各个对象的边界。
 4250 +++$+++ liyushishuaige +++$+++ 请问我加了监听事件为什么不起作用
-4251 +++$+++ xsstomy +++$+++ 你的引擎版本号是多少
-1如果是1.5.4之前的，需要手动设置宽高
-2由于1.5.4版本这个有bug，所以出发不了，如果是学习的话，请把引擎升级到最新版本1.5.5
+4251 +++$+++ xsstomy +++$+++ 不同版本方法不一样，试试升级
 4252 +++$+++ yanmingjie +++$+++ 关于官方的demo，自定义字体问题
 4253 +++$+++ 不是一抹微笑 +++$+++ 非常nice
 4254 +++$+++ sxd +++$+++ 加载资源的问题
 4255 +++$+++ yangning20008 +++$+++ fnt里面引用的图片文件名跟导出的图片文件名称不一样吗？方便的话留下您的qq，方便我们与您联系
-4256 +++$+++ liyushishuaige +++$+++ 提示egret.MainContext.instance.stage is null
-4257 +++$+++ egret-Jerry +++$+++ static是静态的，相当于你加载Data.js文件时候就会执行到，那个时候stage肯定还没初始化呢，不要这么用
-你可以写一个静态初始化方法，进入游戏之后调用初始化方法，那时候再赋值stageHeight属性
+4256 +++$+++ liyushishuaige +++$+++ egret.MainContext.instance.stage is null
+4257 +++$+++ egret-Jerry +++$+++ 写一个静态初始化方法，进入游戏之后调用初始化方法，那时候再赋值stageHeight属性
 4258 +++$+++ yukunpeng +++$+++ egret与js通信
 4259 +++$+++ egret-Jerry +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=267
-建议发问题之前先搜索一下
 4260 +++$+++ 文刀三授 +++$+++ 求助下大家买的是什么主机呀？
 4261 +++$+++ guoshaorui +++$+++ 阿里云
 4262 +++$+++ lb123 +++$+++ 程序有时候会报undefined错误。。。
@@ -4272,11 +4268,8 @@
 4267 +++$+++ zcxp +++$+++ 是这样的，因为egret 是不会编译 没有引用的组件的，是不是被引用了就是看项目中有没有使用这个类，字符串拼接的这种方式不能被识别，所以会失败，你可以在某个确定会被引用的文件中显示的声明一下，即使是在注释中都可以
 4268 +++$+++ errorfun +++$+++ egret.Tween怎么判断动画结束？
 4269 +++$+++ 张宇 +++$+++ egret.Tween.get(sp1).to(xxxx).call(this.complete,this)
-
-private complete():void{}
-call就是判断结束
 4270 +++$+++ 孤独之潜行者 +++$+++ 怎样部署到node的服务器上，和后端代码部署到同一个域
-4271 +++$+++ 张宇 +++$+++ http://bbs.egret-labs.org/thread-1512-1-1.html 这个附件里有node下启动egret的代码
+4271 +++$+++ 张宇 +++$+++ http://bbs.egret-labs.org/thread-1512-1-1.html
 4272 +++$+++ jiangruo107 +++$+++ egret wing 拼好界面后，程序如何调用
 4273 +++$+++ junlas +++$+++ GUI的组件和皮肤是分离的。你只是设置好了皮肤，还要通过程序调用组件才行。我也在学习中，我个人的理解是这样。
 4274 +++$+++ hammer +++$+++ 是否可以给Bitmap叠加颜色，如何做？
@@ -4288,12 +4281,7 @@ call就是判断结束
 4280 +++$+++ wsrlyk +++$+++ UI图片显示不了
 4281 +++$+++ f111fei +++$+++ 检查一下项目初始化的时候是否注入了AssetsAdapter。
 4282 +++$+++ ABCD +++$+++ egret如何接收服务器发过来的值
-4283 +++$+++ din +++$+++ 你悬赏的问题，之前有人问过，请看
-http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=5923&extra=page%3D2
-
-你后面问的问题：
-1.执行代码最好都写在createGameScene，也就是资源加载完执行
-2.this._request是URLRequest类，具体看http://www.egret-labs.org/api中搜索URLRequest
+4283 +++$+++ din +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=5923&extra=page%3D2
 4284 +++$+++ 小小明 +++$+++ 在GUI项目里面，使用setElementIndex，设置深度，会报索引错误
 4285 +++$+++ f111fei +++$+++ 报超出范围肯定就是超出了。你使用调试功能调试一下这个容器的numElements的值是多少，然后再看看this.curRect+10的值是多少，一比较就知道了。
 4286 +++$+++ rockyf +++$+++ 已解决-求删除
@@ -4311,15 +4299,11 @@ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=5923&extra=page%3D2
 4298 +++$+++ gamedever +++$+++ 浏览器缓存，导致服务端更新，浏览器端仍然访问旧版本！
 4299 +++$+++ egret-Jerry +++$+++ 这种最简单的方式内部就可以实现，html页面加载一个config文件（config文件链接带有随机+时间戳以保证每次都是最新的）,然后根据config文件里的最新版本修改location.href
 4300 +++$+++ slert +++$+++ 向后台提交游戏数据如何防作弊？
-4301 +++$+++ hammer +++$+++ 本质上没有办法解决。但是可以通过一系列的手段增加作弊难度：
-1）客户端记录玩家操作记录，然后提交成绩的时候，同时提交到服务器。服务器验算一遍，通过才可以上榜。
-2）客户端和服务器端通信有加密/校验算法，服务器做算法校验。
-3）或者其他什么办法。。。可以针对你们发现的作弊方式具体考虑 ...
-4302 +++$+++ 乄涯 +++$+++ 图片重复绘制该怎么破，后来我移除了监听事件程序能走.....
+4301 +++$+++ hammer +++$+++ 可以通过一系列的手段增加作弊难度。
+4302 +++$+++ 乄涯 +++$+++ 图片重复绘制该怎么破，后来我移除了监听事件程序能走
 4303 +++$+++ egret-Jerry +++$+++ 在你添加的GROUP_COMPLETE侦听函数中，判断一下groupName属性，具体参照一下新建项目的侦听函数
 4304 +++$+++ DrummerJ +++$+++ MovieClip可以从SpriteSheet创建吗
 4305 +++$+++ 张宇 +++$+++ http://bbs.egret-labs.org/thread-127-1-2.html
-这个工具可以
 4306 +++$+++ zhaozhen +++$+++ 进度条编译后报错
 4307 +++$+++ egret-Jerry +++$+++ 1.6这个bug已经修复，在master分支，可以更新使用
 4308 +++$+++ phhui +++$+++ Egret如果开发移动应用，能获取到系统信息不，如通信录内容
@@ -4333,10 +4317,9 @@ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=5923&extra=page%3D2
 4316 +++$+++ Hammerlimy +++$+++ GitHub的东西怎么下载，要一个一个拷贝吗
 4317 +++$+++ 张宇 +++$+++ GitHub有客户端工具，能全部下载
 4318 +++$+++ 春秋一语 +++$+++ 关于egret的linux版本
-4319 +++$+++ xsstomy +++$+++ http://bbs.egret-labs.org/forum. ... 181&highlight=linux
-新的版本没有linux的，这是之前的
+4319 +++$+++ xsstomy +++$+++ 新的版本没有linux的，这是之前的
 4320 +++$+++ jhxspy +++$+++ 求各种闪 各种大神
-4321 +++$+++ egret-Jerry +++$+++ 你图片的引用都能拿到了，调用方法和访问他的属性一样的，直接调用就好
+4321 +++$+++ egret-Jerry +++$+++ 来了
 4322 +++$+++ Superman +++$+++ 为什么要把GUI组件跟场景区分开
 4323 +++$+++ tommyZZM +++$+++ 提高 可维护性，可拓展性。
 4324 +++$+++ huguangdieying +++$+++ WING中导入项目提示项目引擎编译失败
@@ -4350,9 +4333,8 @@ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=5923&extra=page%3D2
 4332 +++$+++ HongSama +++$+++ 打包app时报错
 4333 +++$+++ 7yue +++$+++ 没有115，都用114就可以了。
 4334 +++$+++ 乄涯 +++$+++ EGret中有不规则遮罩吗？如何使用？
-4335 +++$+++ xsstomy +++$+++ 我想拍死你，群里回答了，你不看，又跑这里来问
-https://github.com/egret-labs/egret-examples/blob/master/CoreExample/src/TestMask.ts
-4336 +++$+++ 乄涯 +++$+++ 求问Egret是否可以限制FPS，比如不动的适合限制到0，动的.....
+4335 +++$+++ xsstomy +++$+++ https://github.com/egret-labs/egret-examples/blob/master/CoreExample/src/TestMask.ts
+4336 +++$+++ 乄涯 +++$+++ 求问Egret是否可以限制FPS，比如不动的适合限制到0，动的
 4337 +++$+++ egret-Jerry +++$+++ FPS的限制现在只支持初始化的时候设置一次
 4338 +++$+++ jason +++$+++ 在电脑上玩游戏时鼠标移动到按钮上如何显示为手型？
 4339 +++$+++ 月之轮回2009 +++$+++ 调用外部javascript解决此问题，外部js封装好showHandMouse方法，然后游戏内部调用，showHandMouse的实现就是修改canvas的css属性cursor为pointer，恢复箭头把cursor设为default。
@@ -4360,35 +4342,16 @@ https://github.com/egret-labs/egret-examples/blob/master/CoreExample/src/TestMas
 4341 +++$+++ egret-Jerry +++$+++ 这个应该是1.6的一个bug，你可以使用最新master分支解决这个问题，或者等今天1.6.1版本发布
 4342 +++$+++ dgmscr +++$+++ 安装了egret1.5后引用egret.WebSocket提示不存在，求解
 4343 +++$+++ yicaoyimu +++$+++ webSocket是做引擎扩展的，默认是不添加在项目中的，需要自己配置下
-在egretProperties.json的modules中，添加：
-{
-        "name": "socket"
-}
-
-然后egret build -e下
 4344 +++$+++ zario +++$+++ 请问怎么实现从中间到两边的遮罩？
 4345 +++$+++ egret-Jerry +++$+++ http://docs.egret-labs.org/as2ts/webglcode/mask.html
-给你参考
 4346 +++$+++ Theodore +++$+++ MovieClip不显示
 4347 +++$+++ egret-Jerry +++$+++ 在一键安装包把相关软件都更新，应该就都是最新的了
 4348 +++$+++ hammer +++$+++ egret.ByteArray文档不全
-4349 +++$+++ yicaoyimu +++$+++ 可临时看下as的文档
-http://help.adobe.com/zh_CN/FlashPlatform/reference/actionscript/3/flash/utils/ByteArray.html
+4349 +++$+++ yicaoyimu +++$+++ http://help.adobe.com/zh_CN/FlashPlatform/reference/actionscript/3/flash/utils/ByteArray.html
 4350 +++$+++ yangqin041 +++$+++ 重置了引擎之后还报egret不是内部命令
 4351 +++$+++ f111fei +++$+++ 检查一下你的Path这个环境变量是否有上面我说的那个npm的那个目录。应该是你弄java环境变量的时候把那个删掉了
 4352 +++$+++ shavy +++$+++ HelloWorld打包ios总是失败
-4353 +++$+++ r2d2 +++$+++ 我刚才测试了一下，我的测试环境是这样的。
-[*]egret v1.6.1
-[*]egret ios support v1.6.1,
-[*]xcode 6.2,
-[*]base sdk latest (iOS 8.2)
-
-测试用的手机
-
-[*]iPhone 4s 8.2
-[*]iPad Air 7.0
-
-整个过程是OK的。你可以现把egret ios support给删除了，重新下载一份。
+4353 +++$+++ r2d2 +++$+++ 重新下载 egret-ios-support 
 4354 +++$+++ sxzmail +++$+++ 怎么使用通过RES.getResByUrl方法下载到的资源
 4355 +++$+++ egret-Jerry +++$+++ 引擎这样加载sheet有个bug，已经在master分支修复，可以更新试试
 4356 +++$+++ yangqin041 +++$+++ egret的startserver指令连接不到服务器
@@ -4411,18 +4374,8 @@ http://help.adobe.com/zh_CN/FlashPlatform/reference/actionscript/3/flash/utils/B
 4373 +++$+++ egret-Jerry +++$+++ 相同的问题，请参考：http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=6305
 4374 +++$+++ cholf +++$+++ webstorm  gui项目设置了自动编译后死循环一直编译一直报错
 4375 +++$+++ dom +++$+++ 这个bug请等官方修复。是webstorm跟egret的编译器冲突了。
-
-暂时可以这么解决：
-
-请把webstorm的自动编译关掉。使用Egret自己的自动编译机制就行了。
-
-WebStorm里打开设置面板。搜索一下FileWatcher把勾去掉
-
-开启Egret自带的自动编译只要加个参数就行：egret startserver HelloWord -autoCompile
 4376 +++$+++ yo181yo +++$+++ egret打包发布遇到问题，求高人指点
-4377 +++$+++ city +++$+++ 应该是这个面板有问题：
-
-核对一下，你的gen目录类型。
+4377 +++$+++ city +++$+++ 核对一下，你的gen目录类型。
 4378 +++$+++ pow303433732 +++$+++ 请问输入文本框怎么保持背景色一致显示啊？
 4379 +++$+++ Channing +++$+++ 应该是这个方法 setStyles（）  0.0
 4380 +++$+++ monkifly +++$+++ Label设置text之后的宽度没马上发生变化
@@ -4430,37 +4383,21 @@ WebStorm里打开设置面板。搜索一下FileWatcher把勾去掉
 4382 +++$+++ huguangdieying +++$+++ 自己写的ts文件，转换成js之后所有的中文都是乱码
 4383 +++$+++ 唐哥哥游戏 +++$+++ 用支持utf-8的文本编辑器把文件另存为utf-8编码试试
 4384 +++$+++ jhxspy +++$+++ 关于屏幕适配的问题
-4385 +++$+++ cfcf +++$+++ 可以看看这篇帖子：http://bbs.egret-labs.org/thread-2727-1-1.html
-
-如果你用的Wing的话，调整一些约束神马的可以适配
+4385 +++$+++ cfcf +++$+++ http://bbs.egret-labs.org/thread-2727-1-1.html
 4386 +++$+++ huguangdieying +++$+++ 关于ArrayCollection
 4387 +++$+++ f111fei +++$+++ 应该是1.6.0引擎的bug。 请更新到最新的master分支或者等今天发布的1.6.1
 4388 +++$+++ nofastfat +++$+++ egret中，是否支持socket/websocket
 4389 +++$+++ 7yue +++$+++ 1.5 websocket
 4390 +++$+++ 张宇 +++$+++ GUI系统的加载资源是单独进行的吗？
 4391 +++$+++ f111fei +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=6296
-看这个帖子。
 4392 +++$+++ ling +++$+++ 实时检测碰撞用setInterval()函数来实现吗
-4393 +++$+++ xsstomy +++$+++ obj.addEventListener(egret.Event.ENTER_FRAME,this.isHitted,this);
-isHitted 这个方法就是碰撞检测方法
-egret.Event.ENTER_FRAME 就是引擎每帧事件，也就是实时检测
+4393 +++$+++ xsstomy +++$+++ isHitted 这个方法就是碰撞检测方法
 4394 +++$+++ lb123 +++$+++ 如何立即获得修改后的控件尺寸
 4395 +++$+++ matianyi +++$+++ 感觉应该是不能立刻获取…可以setTimeOut然后延迟执行获得尺寸后的逻辑
 4396 +++$+++ ling +++$+++ egret.gui.Alert.show()中回调函数出现的问题
 4397 +++$+++ f111fei +++$+++ 回调函数reStart里面不要用this指针，  这里this指向的是Alert而不是你这个类 . 目前的解决办法
 4398 +++$+++ ling +++$+++ Egret是否有mouseover事件类型?
-4399 +++$+++ csujin +++$+++ [mw_shl_code=applescript,true]private _bmoveLock:boolean=false;
-    private onTouchBegin(evt: egret.TouchEvent) {
-        this._bmoveLock = false;
-    }
-    private onTouchMove(evt: egret.TouchEvent) {
-        if (this._bmoveLock) return;
-        this._bmoveLock = true;
-        //执行逻辑代码
-    }
-    private onTouchEnd(evt: egret.TouchEvent) {
-        this._bmoveLock = false;
-    }[/mw_shl_cod ...
+4399 +++$+++ csujin +++$+++ onTouchBegin
 4400 +++$+++ 木_cjgm +++$+++ VS和cmd编译执行的时候结果不同
 4401 +++$+++ egret-Jerry +++$+++ 这个理论上是一样的，你vs编译的时候有报错么？如果没有能否发一个demo项目上来，我们看看
 4402 +++$+++ rockyf +++$+++ native打包怎么判断是ios还是android系统
@@ -4478,23 +4415,7 @@ egret.Event.ENTER_FRAME 就是引擎每帧事件，也就是实时检测
 4414 +++$+++ lb123 +++$+++ websocket的链接地址问题
 4415 +++$+++ egret-Jerry +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=6030
 4416 +++$+++ hzq1126 +++$+++ Tabbar的尺寸和拖动区域为什么不匹配？
-4417 +++$+++ xsstomy +++$+++ 这个是因为gui膜拜皮肤的原因，已经确认了，
-
-
-    
-    
-        
-        
-    
-    
-        
-            
-        
-    
-
-
-到tabbarskin里面把top＝90  删掉，就好了
-抱歉这么久才回复
+4417 +++$+++ xsstomy +++$+++ 这个是因为gui膜拜皮肤的原因
 4418 +++$+++ 木_cjgm +++$+++ 不同的button共用同一个回调要怎么区别呢？
 4419 +++$+++ egret-Jerry +++$+++ 可以，设置button的name属性区分开name就可以了
 4420 +++$+++ rockyf +++$+++ EgretEngine安装问题
@@ -4512,21 +4433,15 @@ egret.Event.ENTER_FRAME 就是引擎每帧事件，也就是实时检测
 4432 +++$+++ huguangdieying +++$+++ Wing生成了一个loadingUI的皮肤，其中包括了一个ProgressBar
 4433 +++$+++ egret-Jerry +++$+++ 你这是1.6版本的引擎么？如果是的话，升级到1.6.1吧
 4434 +++$+++ huangzhoulvbu +++$+++ android 打出的包效果不尽人意。希望能改善。
-4435 +++$+++ jkd2972 +++$+++ 1.楼主童鞋提出的BUG确实存在。我们已经重现了这个问题并确认了问题的原因，积极修复中。
-2.问题产生的原因确实是父容器缩放导致容器中文字缩放后变得模糊。
-   十分感谢热心的楼主！！！。
+4435 +++$+++ jkd2972 +++$+++ 十分感谢热心的楼主
 4436 +++$+++ komos +++$+++ egret gui的设计思路是只能一个exml对应一个控件皮肤吗?
 4437 +++$+++ hammer +++$+++ var ui = new egret.gui.SkinnableComponent();
-ui.skinName = 'your skin name';//设置皮肤
-uistage.addElement(ui);
-ui['id_name']//获取id_name控件
 4438 +++$+++ yanmingjie +++$+++ 将一个有皮肤和皮肤类的按钮使用另外一个皮肤中问题
 4439 +++$+++ matianyi +++$+++ 从自定义组件把自定义的button组件拖进去选择自定义的对应皮肤
 4440 +++$+++ yjfy +++$+++ 环形遮罩该这么实现
 4441 +++$+++ hammer +++$+++ 使用RenderTexture和BlendMode.ERASE_REVERSE可以实现，具体可以参考白鹭官方的demo
 4442 +++$+++ junlas +++$+++ 关于gui.List中 自定义ItemRenderer显示的疑惑
-4443 +++$+++ f111fei +++$+++ 我重新看了下，你说的是对的。默认的RES配置里面jpeg类型图片格式并没有解析成image类型的资源而是解析成了bin类型的。 具体的代码你可以看Resource.ts里面的getTypeByUrl这个函数。下个版本我们将会修复这个问题。
-总之，默认的AssetAdapter是支持url方式的，可以放心使用，不过图片的格式最好使用传统的格式。如果一定要用自定义或者其他肥猪流格式你可以自己定义AssetAdapter以支持更加灵活的解析方式 ...
+4443 +++$+++ f111fei +++$+++ 具体的代码你可以看Resource.ts里面的getTypeByUrl这个函数。
 4444 +++$+++ huangzhoulvbu +++$+++ 请问egret是否支持往缓存写数据的功能
 4445 +++$+++ xsstomy +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=1341&highlight=%E5%AD%98%E5%82%A8
 4446 +++$+++ huangzhoulvbu +++$+++ 项目太大的话，加载所有的js会很耗时间的问题。
@@ -4540,32 +4455,23 @@ ui['id_name']//获取id_name控件
 4454 +++$+++ sanders_yao +++$+++ 能否计算DisplayObject实例旋转后的左上点坐标？
 4455 +++$+++ egret-Jerry +++$+++ 这个估计你得自己写方法算一下了
 4456 +++$+++ 木_cjgm +++$+++ 字符串怎么修改某个子串。。
-4457 +++$+++ yicaoyimu +++$+++ var str = "123456";
-        var arr = str.split("");
-        arr[0] = 9;
-        str = arr.join("");
+4457 +++$+++ yicaoyimu +++$+++ str.split  arr.join
 4458 +++$+++ misa +++$+++ 请问这段代码有啥问题？？
 4459 +++$+++ huguangdieying +++$+++ this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.move, this.stage);最后一个参数是this
 4460 +++$+++ lucius +++$+++ 动态更换gui组件皮肤
 4461 +++$+++ matianyi +++$+++ 动态的话就整体改把，把skinname的整体改为另外一个。原理感觉应该是skins.simple.TestBtnSkin这个其实指向的是皮肤所用的exml文件。并不是跟资源似的一个字符串去根据这个索引去找到这个文件然后赋值。
 4462 +++$+++ yeshao2069 +++$+++ 动态添加按钮，如何更改按钮的图片
-4463 +++$+++ cfcf +++$+++ 有两种做法， 1：wing 里面可以做一个Button 皮肤 ，教程是： 
-http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=1878&extra=page%3D1  
-
-2：自己自定义一个类组件，设置状态，正常，按下，抬起 ，设置不同的图片，根据不同鼠标点击的状态，让他切换状态
+4463 +++$+++ cfcf +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=1878&extra=page%3D1  
 4464 +++$+++ acxzx +++$+++ 判断一个已声明的变量的数据类型
 4465 +++$+++ egret-Jerry +++$+++ 不要加
 4466 +++$+++ 木_cjgm +++$+++ egret是否有引用参数？
 4467 +++$+++ egret-Jerry +++$+++ 你可以把test变为一个对象的属性，修改对象的属性就可以
 4468 +++$+++ 傲然天宇 +++$+++ rotation：旋转角度这个怎么修改旋转中心
 4469 +++$+++ guoshaorui +++$+++ this.logo.anchorX = 0.5;
-this.logo.anchorY = 0.5;
 4470 +++$+++ 陈启明 +++$+++ DisplayObjectContainer能否实现类似于overflow:hidden的效果?
 4471 +++$+++ egret-Jerry +++$+++ 设置容器mask属性
 4472 +++$+++ maikid +++$+++ 位图填充与描边
-4473 +++$+++ xsstomy +++$+++ 拼图还行，描边有，滤镜没有。
-http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=6624
-http://docs.egret-labs.org/post/manual/text/textstyle.html
+4473 +++$+++ xsstomy +++$+++ http://docs.egret-labs.org/post/manual/text/textstyle.html
 4474 +++$+++ yeshao2069 +++$+++ EgretWing中如何设置图片的旋转
 4475 +++$+++ xsstomy +++$+++ 在wing界面，有一个属性模块面板，最右边点击按钮，就会出现所有的属性，就可以设置rotation了
 4476 +++$+++ canghai +++$+++ egret h5 IOS平台 加载过多的资源后性能急剧下降
@@ -4583,37 +4489,25 @@ http://docs.egret-labs.org/post/manual/text/textstyle.html
 4488 +++$+++ innocentjulie +++$+++ Egret 声音问题
 4489 +++$+++ Channing +++$+++ 你用OGG试试 绝对没延迟！
 4490 +++$+++ cloudy1982 +++$+++ gui.SkinnableComponent 添加到舞台后，会发出事件吗？
-4491 +++$+++ xsstomy +++$+++ 方案1，在gui.SkinnableComponent这个逻辑类，重写ChildrenCreated(){//dosomething}
-方案2，在gui.SkinnableComponent这个逻辑类中，你需要的地方监听egret.gui.UIEvent.CREATION_COMPLETE
-4492 +++$+++ yo181yo +++$+++ 运行egretwing 报错，求救！！！！
+4491 +++$+++ xsstomy +++$+++ 在gui.SkinnableComponent这个逻辑类，重写ChildrenCreated(){//dosomething}
+4492 +++$+++ yo181yo +++$+++ 运行egretwing 报错
 4493 +++$+++ xsstomy +++$+++ 引擎面板点击重置引擎
 4494 +++$+++ zxjellen +++$+++ 图片二进制流怎么显示啊?
-4495 +++$+++ hus +++$+++ 用RES.getResByUrl(url,completeFunc,thisObject,RES.ResourceItem.TYPE_IMAGE);
-url为服务器获取图片的url.
-回调函数的第一个参数就是图片的texture，给bitmap赋上就行了。
+4495 +++$+++ hus +++$+++ texture，给bitmap赋上就行了
 4496 +++$+++ govo +++$+++ 怎么刷新List各项UI，同时又不会引起画面跳动
 4497 +++$+++ f111fei +++$+++ 可以，数据层改变会自动刷新视图。itemUpdate适合做局部刷新 。 如果是整体刷新就用ArrayCollection.refresh()，但是滚动条和选中项会重置，需要做一下额外处理才能恢复滚动条位置和选中项。
 4498 +++$+++ qk123 +++$+++ 打包winphone平台报这个错误是什么原因啊？
-4499 +++$+++ zcxp +++$+++ Windows Phone SDK真机部署可能会有些奇怪的问题，我也没有搜索到准确的信息，这个错误代码很常见，不仅仅是个Windows Phone的错误码。
-
-一般遇到这个问题我的解决办法是：
-
-卸载已经部署的版本，防止由于替换文件造成的问题
-重新启动Windows Phone，有几次VS部署失败，重启手机就好了
-尽量直接拿VS部署，打出的包跟设备版本一致 ...
+4499 +++$+++ zcxp +++$+++ 卸载已经部署的版本，防止由于替换文件造成的问题。
 4500 +++$+++ jiuaizxc +++$+++ Egret Wing打不开
-4501 +++$+++ xsstomy +++$+++ 看来，亲要安装egret engine额，亲没有装引擎吧
+4501 +++$+++ xsstomy +++$+++ 要安装egret engine，没有装引擎吧
 4502 +++$+++ 515268703 +++$+++ 微信接口
-4503 +++$+++ cfcf +++$+++ 这里需要接入第三方的类库，参考这里：http://bbs.egret-labs.org/thread-915-1-1.html
+4503 +++$+++ cfcf +++$+++ http://bbs.egret-labs.org/thread-915-1-1.html
 4504 +++$+++ wogooo +++$+++ 使用WebGL模式 IndexSizeError
 4505 +++$+++ egret-Jerry +++$+++ 这个是1.1.4的一个bug，更新到git最新master分支或者等本周五发布的新版本，就可以得到解决
 4506 +++$+++ .ts +++$+++ [功能建议]ExternalInterface call 没有返回值 可以加个返回值
 4507 +++$+++ egret-Jerry +++$+++ 这个可能后续版本会加入，确实需求比较多的，感谢反馈
 4508 +++$+++ hushanjing +++$+++ 加载资源出现 object is not a function 错误
-4509 +++$+++ egret-Jerry +++$+++ 在LoadPage.ts中把egret.Texture对象覆盖了：
-bgTexture = egret.Texture = RES.getRes("shading");
-不能这个用改为：
-bgTexture = RES.getRes("shading");
+4509 +++$+++ egret-Jerry +++$+++ 在LoadPage.ts中把egret.Texture对象覆盖了。
 4510 +++$+++ 木_cjgm +++$+++ 组件排布问题
 4511 +++$+++ egret-Jerry +++$+++ 你也可以侦听屏幕改变事件，然后重新设置xy之类的属性
 4512 +++$+++ hzq1126 +++$+++ 无法打包
@@ -4626,17 +4520,14 @@ bgTexture = RES.getRes("shading");
 4519 +++$+++ egret-Jerry +++$+++ 看了一下这应该是引擎的一个bug，会在后续版本修复
 4520 +++$+++ cloudy1982 +++$+++ 有没有同学搞protobuf的?求经验分享...
 4521 +++$+++ zhongmingyu +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=6260&highlight=protobuf
-楼主可以看看这个帖子
 4522 +++$+++ 木_cjgm +++$+++ 文本输入控件
 4523 +++$+++ f111fei +++$+++ 哦， 不好意思。官方提供的TextInput的默认皮肤没有promptDisplay这个皮肤部件。你改一下TextInputSkin加一个promptDisplay皮肤部件就行了
 4524 +++$+++ 木_cjgm +++$+++ string类型判定问题
 4525 +++$+++ xsstomy +++$+++ instanceof  是判断类的类型     typeof  是判断基础的类型，也就是常用的，string ，number，boolean
 4526 +++$+++ flqjq123 +++$+++ 问一个关于接口类型判断的问题
-4527 +++$+++ f111fei +++$+++ if ("setLayoutBoundsSize" in skin)
-     ( (skin)).setLayoutBoundsSize(unscaledWidth, unscaledHeight);
+4527 +++$+++ f111fei +++$+++ 可以到QQ群里问。
 4528 +++$+++ szwzjx +++$+++ 自定义组件怎么在wing中即时预览效果？
 4529 +++$+++ xsstomy +++$+++ wing中，中间的设计区域有预览模式，切换到预览模式就可以预览的
-还有亲，说的这个属性没有及时更新的问题，感谢反馈。
 4530 +++$+++ hammer +++$+++ Chrome中背景音乐不能循环
 4531 +++$+++ xieweiaaa +++$+++ 是的 非常多的BUG 你还没有在ios上测试吧 都是无效的 所以用定时器循环
 4532 +++$+++ fraser +++$+++ 请教相对锚点和绝对锚点的概念有什么区别~
@@ -4647,14 +4538,8 @@ bgTexture = RES.getRes("shading");
 4537 +++$+++ f111fei +++$+++ 这个问题不用理睬，是VS的问题。
 4538 +++$+++ szwzjx +++$+++ Egret中重力感应，怎么监听不到？
 4539 +++$+++ egret-Jerry +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=1567
-之前很多人分享过，还有源码
 4540 +++$+++ meritee +++$+++ 请教1.6+版本Android打包流程
 4541 +++$+++ xsstomy +++$+++ http://docs.egret-labs.org/post/tools/native/androidformac.html  可以参考mac下面的apk打包，个人认为就三步。
-1.确保文件目录都对，其实弄懂原理，相对路径，可以随意修改。保证命令路径全部正确
-2.保证引擎和support的版本号一致
-3.保证eclipse安装正确，最后直接执行debug就可以生成apk
-4.如果出现黑屏，请确认用引擎创建的默认项目是否能打包成功，而且能够正常显示。
-黑屏：看报错，如果不报错，请确认上面三步都是正确的 ...
 4542 +++$+++ tornadoorz +++$+++ 使用tree的preventDefault()方法阻止节点的状态改变失败~
 4543 +++$+++ f111fei +++$+++ 抱歉回复晚了。这个问题是GUI里面的一个bug，已经在最新的masker分支上修复。可以等待下个版本发布，或者检出最新的masker分支
 4544 +++$+++ D_Y +++$+++ egret使用P2物理引擎的demo便以失败
@@ -4665,8 +4550,6 @@ bgTexture = RES.getRes("shading");
 4549 +++$+++ hanns +++$+++ ts没有package概念，但是你可以给项目分文件夹，module和文件夹无关，所以你直接分层就行了，用同一个module
 4550 +++$+++ codeoflive +++$+++ addChildAt的问题 一直提示超出范围
 4551 +++$+++ 张宇 +++$+++ this.numChildren()可以得到场景中有多少个元素，不能超过这个数字。
-一般情况下，最常用的参数是0，意思是放在最底层，放在最上层直接addChild就可以
-this.addChildAt(this.gameLayer,0);
 4552 +++$+++ monkifly +++$+++ IOS编译不过，版本1.1.4
 4553 +++$+++ r2d2 +++$+++ 你的Egret core的版本是多少？现在core 1.5.1CE, ios 1.1.4, xcode 6.1测试是可以的
 4554 +++$+++ rockyf +++$+++ 在微信的浏览器里面，第一次打开网页显示不正常
@@ -4678,87 +4561,51 @@ this.addChildAt(this.gameLayer,0);
 4560 +++$+++ pow303433732 +++$+++ 请问一下EGRET有界面跳转这一说的吗？
 4561 +++$+++ 张宇 +++$+++ 每个场景放到一个sprite里，想显示哪个就addChild(xxx)
 4562 +++$+++ pow303433732 +++$+++ 请问一下EGRET的GUI功能用的频繁吗
-4563 +++$+++ shawn0326 +++$+++ 最近在研究GUI和wing，我来回答下。
-小游戏的确不需要，增加复杂度不说，使用GUI也将会多加载很多文件，没有意义。
-那么开发稍微大型一点的游戏就不同了，比如网游，深入研究一款大中型网游你就会发现，游戏中的真正“游戏”场景并不多，甚至有的游戏并没有所谓的“战斗场景”，这时候，游戏客户端的实现其实就是在实现各种UI界面。大型游戏开发中，GUI的开发一般都是独立出来的，因为用编辑游戏场景的方式来写GUI，将是十分麻烦的 ...
+4563 +++$+++ shawn0326 +++$+++ 小游戏不需要
 4564 +++$+++ jianzi0307 +++$+++ 为什么编译生成的game_file_list.js中文件顺序是错的呢？
 4565 +++$+++ dom +++$+++ 已经确认是编译器的bug，正在调试修复中。感谢反馈。你如果着急用，修复完成后，可以自行下载https://github.com/egret-labs上的master分支替换引擎安装目录里的egret文件夹。或者等下周五正式版发布。
 4566 +++$+++ pow303433732 +++$+++ 关于EGRET的一些基础问题。
-4567 +++$+++ 张宇 +++$+++ 1 http://bbs.egret-labs.org/thread-109-1-1.html
-2 http://docs.egret-labs.org/post/manual/anim/tween.html
-3. http://bbs.egret-labs.org/thread-405-1-1.html 真排行榜
-http://bbs.egret-labs.org/thread-968-1-1.html  假排行榜
+4567 +++$+++ 张宇 +++$+++ http://bbs.egret-labs.org/thread-109-1-1.html
 4568 +++$+++ pow303433732 +++$+++ 为什么我创建的项目没有GAMEAPP.TS这个文件
 4569 +++$+++ shawn0326 +++$+++ 你说的应该是旧版本的egret，现在egret新项目的文档类默认为Main，webstrom的主题风格可以在设置中设置的，代码区和菜单的主题可以分别设置
 4570 +++$+++ pow303433732 +++$+++ 关于碰撞检测的一些疑问
-4571 +++$+++ phhui +++$+++ 1、官方的就这两个，你自己可以用坐标去检测或者像素判断
-2、应该就是不管碰撞对象是否启用TouceEnabled都进行判断
-3、对象相对于父容器的坐标
-4、动态检测跟坐标检测有啥冲突么？你所谓的动态是指哪种动态？这个没什么动态或静态之分，动手试一试就知道了。
-比如是哪个坐标检测，你调试一下，把坐标输出来就知道了。
-一定要动手实践 ...
+4571 +++$+++ phhui +++$+++ 可以用坐标去检测或者像素判断
 4572 +++$+++ shawn0326 +++$+++ GUI中包含动态元素的处理方式
 4573 +++$+++ egret-Jerry +++$+++ 可以用UIAsset这个万能包装器
 4574 +++$+++ 周鹏斌 +++$+++ RenderTexture 怎么使用 我这显示不出来
 4575 +++$+++ 张宇 +++$+++ 我照你的代码原样打了一遍，chrome显示正常，firefox不显示。应该是bug
 4576 +++$+++ coffeg +++$+++ post网络数据返回无法显示
 4577 +++$+++ zario +++$+++ 我也有这个问题，返回的data里面的variables是空的obj
-已解决，原来是loader.[/backcolor]dataFormat = egret.URLLoaderDataFormat.TEXT;[/backcolor]
 4578 +++$+++ gutong +++$+++ Java端调用 ExternalInterface.call无响应
 4579 +++$+++ Wander +++$+++ 这个问题是个已知BUG，我们会在本周五发布的 Egret 1.1.1版本中解决这个问题，感谢反馈！
 4580 +++$+++ pow303433732 +++$+++ 请问一下大家这种情况封装一个BITMAP类是怎么操作的？
-4581 +++$+++ hus +++$+++ 每个场景用不同的egret.DisplayObjectContainer。
-var bitmap = new egret.Bitmap();
-bitmap.texture = RES.getRes("res_name");
-this.addChild(bitmap);
-直接用Bitmap就好了，没必要都去继承Bitmap类。
+4581 +++$+++ hus +++$+++ 直接用Bitmap就好了，没必要都去继承Bitmap类。
 4582 +++$+++ jimchen +++$+++ IOS Native 黑屏问题，求帮忙看看
 4583 +++$+++ r2d2 +++$+++ 我们也发现了这个问题，是因为ios版本的问题，目前正在提交hotfix
-ios8是ok的
 4584 +++$+++ innocentjulie +++$+++ 注册点翻转
 4585 +++$+++ guoshaorui +++$+++ 这个行为应该是正常的
-如果你想避免这个问题，最好是设置anchorX=0.5;anchorY=0.5;
-采用中心点定位
 4586 +++$+++ wchong +++$+++ 用官网的方式导出 json 与 png 之后 动画还是播放不了
 4587 +++$+++ 张宇 +++$+++ 这个格式是对的。一个单纯的循环动画就是这样。如果你的动画里面有帧标签，比如walk，jump之类的，才会在frames里生成对应的内容
 4588 +++$+++ wchong +++$+++ 如何用 TextureMerger 生成的json 以及 png  做帧动画
-4589 +++$+++ phhui +++$+++ stand是你自己设置的一个名字而已，你导出来的是什么你就用什么，不一定是stand，你也可以自己改成a或b其它的照搬。
-做动作也不一定要用movieclip，你可以直接给舞台添加个ENTER_FRAME事件，然后控制序列图片的显示来实现动画效果。
+4589 +++$+++ phhui +++$+++ stand是你自己设置的一个名字而已
 4590 +++$+++ wchong +++$+++ 请问 egret 制作帧动画的步骤
-4591 +++$+++ phhui +++$+++ 用代码
-stage.addEventListener(egret.Event.ENTER_FRAME,this.play,this);
-private play(e:egret.Event){
-//动画代码
-}
+4591 +++$+++ phhui +++$+++ 可以到QQ群里问。
 4592 +++$+++ matjumbo +++$+++ 有法让ts与页面js进行交互么
 4593 +++$+++ Channing +++$+++ egret.ExternalInterface.call(“fun”,"str")   
-           egret.ExternalInterface.addCallback(fun,listener)
 4594 +++$+++ dotaforfun +++$+++ 问一下，用Egret弄的APK，可否在Android5.0上运行？
 4595 +++$+++ r2d2 +++$+++ 我们的测试中发现在Android 5.0上除了有中文字体不兼容的已知bug，其它的正常，这个计划争取在这个版本中解决
 4596 +++$+++ wchong +++$+++ egret 怎么判断对象是否已经被添加到画布里面去了
-4597 +++$+++ Channing +++$+++ 1.类是否被加载到舞台：egret.Evetn.ADD_TO_STAGE     
-2.判断对象是否被添加到父容器里：father.contains(child)：Boolean
+4597 +++$+++ Channing +++$+++ father.contains(child)：Boolean
 4598 +++$+++ shawn0326 +++$+++ 皮肤文件包命名为default编译不过去
 4599 +++$+++ f111fei +++$+++ 很多语言把default作为了关键词，包名最好不要命名为这些敏感词汇。
 4600 +++$+++ monkifly +++$+++ 有没有关于写类似AS3中ane教程
 4601 +++$+++ 7yue +++$+++ 用Egret编译为原生的开发过程中，都是标准的Android和ios xcode工程。想接入平台，那些平台sdk直接嵌入安卓和ios工程项目中一起打包就行了。没有什么黑箱的ane概念。
 4602 +++$+++ pow303433732 +++$+++ 关于屏幕适配的一些相关问题
-4603 +++$+++ yicaoyimu +++$+++ 怎么使用的问题
-在launcher\egret_loader.js文件中设置整个游戏的适配策略
-1: egret.StageDelegate.getInstance().setDesignSize(640, 960);
-2: context.stage = new egret.Stage();
-3: var scaleMode =  egret.MainContext.deviceType == egret.MainContext.DEVICE_MOBILE ? egret.StageScaleMode. SHOW_ALL : egret.StageScaleMode.NO_SCALE;
-4: context.stage.scaleMode = scaleMode;
-
-第一行代码设置自己游戏的原始制作尺寸
-第 ...
+4603 +++$+++ yicaoyimu +++$+++ 在launcher\egret_loader.js文件中设置整个游戏的适配策略
 4604 +++$+++ wogooo +++$+++ publish 项目无法运行
-4605 +++$+++ yicaoyimu +++$+++ 擦 你妹的 还花了5个银子，
-
-话说我这测试正常，打包也正常，可以直接进入发送数据的页面，只不过连不上服务器而已
+4605 +++$+++ yicaoyimu +++$+++ 直接进入发送数据的页面，只不过连不上服务器而已
 4606 +++$+++ wchong +++$+++ egret  如何判断对象是否被点击
-4607 +++$+++ phhui +++$+++ 自己设置字段记录，如n记录，=0没点，点一次+1
-再添加点击事件，点击后n++;
+4607 +++$+++ phhui +++$+++ 自己设置字段记录
 4608 +++$+++ 孤独之潜行者 +++$+++ 引擎有没有提供翻转镜像的接口
 4609 +++$+++ shawn0326 +++$+++ scaleX = -1即可
 4610 +++$+++ flyfun +++$+++ 微信分享怎么弄啊？
@@ -4769,10 +4616,8 @@ private play(e:egret.Event){
 4615 +++$+++ guoshaorui +++$+++ 花时间做这个感觉并不划算，你朋友既然和你一起开发，迟早也要接触一些开发方面的资料，比如把这些数值配置成XML或JSON文件，让他直接改配置文件就行了，配置文件应该不难看懂吧
 4616 +++$+++ Hedgehog +++$+++ egret里面如何跟外部通讯
 4617 +++$+++ yicaoyimu +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=267&highlight=JS
-可以参考下这个帖子
 4618 +++$+++ monkifly +++$+++ drawCircle的问题
-4619 +++$+++ dom +++$+++ 普通显示对象这样加到GUI显示列表：var asset:egret.gui.UIAsset = new egret.gui.UIAsset(sprite);
-addChild()在GUI范围内都用addElement（）系列方法替代，如果没有说明这个组件不是容器，不允许添加子项。调用UIComponent.addChild()应该会在控制台给你报个警告的。
+4619 +++$+++ dom +++$+++ 应该会在控制台给你报个警告的。
 4620 +++$+++ 张宇 +++$+++ 建议wing自动生成一个静态类存放皮肤名
 4621 +++$+++ shawn0326 +++$+++ 代码提示用惯了
 4622 +++$+++ pow303433732 +++$+++ 为什么我的游戏publish后放到服务器上有一些图片突然不显...
@@ -4780,45 +4625,21 @@ addChild()在GUI范围内都用addElement（）系列方法替代，如果没有
 4624 +++$+++ .ts +++$+++ Tree希望增加一个expandAll 方法
 4625 +++$+++ zcxp +++$+++ expandAll 需要把场景上所有的对象都遍历一遍，对小游戏无所谓，对中重度游戏来说，会影响到性能。 你想要这个功能的深层需求是什么？
 4626 +++$+++ codeoflive +++$+++ Egret-iOS-support 问题 无法运行
-4627 +++$+++ r2d2 +++$+++ 我测试了一次，以下是测试过程：
-
-
-
-我发现你的xcode的项目的，我测试的不一样，你的是"demoios", 我的是“test”
-, 
-你重新试一下看看。
-谢谢
+4627 +++$+++ r2d2 +++$+++ 你重新试一下看看。
 4628 +++$+++ langlive +++$+++ egret播放声音文件完毕有回调方法吗？
 4629 +++$+++ city +++$+++ 我们引擎的egret.Sound是对H5 audio的封装，因此这类事件可以按照H5手册直接使用，那么播放完毕就是这样的：
-
-
-
-
-
-
-
-
- ...
 4630 +++$+++ 184367426 +++$+++ 音效播放概率性失败
 4631 +++$+++ 月之轮回2009 +++$+++ 参考http://bbs.egret-labs.org/thread-1999-1-1.html
 4632 +++$+++ monkifly +++$+++ 点击问题
 4633 +++$+++ egret-Jerry +++$+++ 设置一下sprite的宽高就好
 4634 +++$+++ pow303433732 +++$+++ 关于服务器的问题， 希望前辈们给我说说其中的逻辑道理
-4635 +++$+++ 月之轮回2009 +++$+++ 1、存储分数：用户玩游戏->游戏上报分数到PHP接口->PHP将分数存入数据库；
-2、展示榜单：从数据库里把分数信息取出来排序，页面拉取榜单数据；
-
-其实是有坑的，上报分数如何防止作弊？拉取榜单接口一般需要用缓存服务器做（memcached、redis之类的），实时榜单每次都从数据库拉效率太低，分分钟服务就挂了。 ...
-4636 +++$+++ pow303433732 +++$+++ 请问在微信端运行的小游戏对游戏本身的性能有什么要求...
-4637 +++$+++ city +++$+++ 我们人力有限，主要关注跟egret引擎本身相关的问题。
-
-基本的算法尽量自己网上查资料，你有现成代码，也行我有空可以帮你改改，但你完全没有代码，我也不可能从头给你写程序吧。。。
+4635 +++$+++ 月之轮回2009 +++$+++  用户玩游戏 -> 游戏上报分数到PHP接口 -> PHP将分数存入数据库；
+4636 +++$+++ pow303433732 +++$+++ 请问在微信端运行的小游戏对游戏本身的性能有什么要求
+4637 +++$+++ city +++$+++ 主要关注跟egret引擎本身相关的问题。
 4638 +++$+++ 等强牛 +++$+++ Uncaught TypeError: Cannot read property 'getTexture' of null
 4639 +++$+++ 7yue +++$+++ 这让大伙情何以堪。
 4640 +++$+++ wchong +++$+++ 请教下有没有办法判断一个egret.MovieClip动画有没有播放？
 4641 +++$+++ yicaoyimu +++$+++ Api中没提供，可以使用一个变通的方式
-
-当每次停止的时候 使用gotoAndStop(1)
-然后通过getCurrentFrameIndex == 1 来判定是否是停止状态
 4642 +++$+++ pow303433732 +++$+++ 请问EGRET能否实现惯性和加速度的效果呀？
 4643 +++$+++ 7yue +++$+++ tween不好，可以直接通过x,y坐标来实现精确操作。AS3有本书叫Flash动画基础教程深入讲这个，道理明白了，切换egret很简单。
 4644 +++$+++ wchong +++$+++ 提个小问题,flash动画图片，最大是不能超过2048x2048？
@@ -4837,10 +4658,6 @@ addChild()在GUI范围内都用addElement（）系列方法替代，如果没有
 4657 +++$+++ f111fei +++$+++ 这种情况可能是您下载的文件有损坏导致的，建议重新执行一次自动更新，或者重新下载最新的安装包
 4658 +++$+++ pow303433732 +++$+++ 请问真实的排名系统到底该如何做呢？
 4659 +++$+++ 月之轮回2009 +++$+++ 服务端不是一天两天就能学好的，最好单独找人帮你做吧。
-给你介绍几个事情吧：
-1、php跟其他脚本语言一样，只需要文本编辑器就能编写，例如sublime text、notepad++甚至记事本就行，如果你需要IDE的话推荐PHP storm或者zend studio（前者跟web storm类似，推荐）；
-2、你需要一个web服务器，常见的apache httpd、ngnix、IIS都行；
-3、有了web服务器，你需要让你的服务器支持解析php语言，如果你用apache服务器，可以安装php扩展， ...
 4660 +++$+++ wchong +++$+++ 提个小问题，ttf字体怎么在egret里面使用。
 4661 +++$+++ hsduren +++$+++ 把ttf制作成fnt就行
 4662 +++$+++ cloudy1982 +++$+++ 在FLASH里做的动画用官方的Plug-in导出后不能被EgretWing识别？
@@ -4848,16 +4665,13 @@ addChild()在GUI范围内都用addElement（）系列方法替代，如果没有
 4664 +++$+++ leonard +++$+++ getPixel32报错
 4665 +++$+++ egret-Jerry +++$+++ Texture目前不能使用这个方法，RenderTexture可以
 4666 +++$+++ gamedos +++$+++ 请教有没有Wing来做List控件皮肤的教程
-4667 +++$+++ f111fei +++$+++ this.listB.itemRenderer = new egret.gui.ClassFactory(game.ListItemB);
-
-具体的List的使用教程可以参考
-http://bbs.egret-labs.org/thread-1055-1-1.html
+4667 +++$+++ f111fei +++$+++ http://bbs.egret-labs.org/thread-1055-1-1.html
 4668 +++$+++ leonard +++$+++ 对象拾取
 4669 +++$+++ egret-Jerry +++$+++ 如果按你图中的判断矩形就好了，尽量不要用像素判断，性能很受影响
 4670 +++$+++ pow303433732 +++$+++ 关于输入文本的问题，有些细节方面的问题不清楚，求助
 4671 +++$+++ egret-Jerry +++$+++ 那应该是bug了，你用的什么设备什么系统版本什么浏览器这些信息提供一下吧。最好能附上你的demo
 4672 +++$+++ cholf +++$+++ vs2013断点调试无效
-4673 +++$+++ zcxp +++$+++ 启动浏览器改为IE，具体参考EgretVS使用手册 http://bbs.egret-labs.org/thread-1853-1-1.html
+4673 +++$+++ zcxp +++$+++ http://bbs.egret-labs.org/thread-1853-1-1.html
 4674 +++$+++ 周鹏斌 +++$+++ 输入文本 可以侦听到焦点么
 4675 +++$+++ 月之轮回2009 +++$+++ 在html中input元素有blur事件，表示失去焦点。
 4676 +++$+++ pow303433732 +++$+++ 请问EGRET能不能设置指定按键关注用户呢？
@@ -4879,65 +4693,51 @@ http://bbs.egret-labs.org/thread-1055-1-1.html
 4692 +++$+++ ignoremeplz +++$+++ BitMap纹理居中显示的问题
 4693 +++$+++ eperfect +++$+++ 我记得是设置anchorX和anchorY为0.5，然后使用scaleX和scaleY来缩放图像，bitmap的x,y坐标分别是纹理的宽和高的一半，scaleX和scaleY计算一下就好
 4694 +++$+++ pow303433732 +++$+++ 请问一下怎么样使用文本当服务器呢？
-4695 +++$+++ phhui +++$+++ 1、你要会布置PHP
-2、你要知道怎么用PHP读取指定目录下的a.txt文本文件
-3、你要知道怎么把a.txt中的内容中的指定字符读取出来并输出到页面上，然后通过127.0.0.1/file.php能看到读取的内容。
-4、用egret连接得到内容就可以了。
+4695 +++$+++ phhui +++$+++ 要会部署PHP
 4696 +++$+++ cloudy1982 +++$+++ 请教一个GUI布局和绑定类的问题
 4697 +++$+++ f111fei +++$+++ 实际上类A相当于一个自定义组件，在Wing里面你可以直接在组件面板的自定义组件里面找到A，然后拖拽到设计区，在Wing里面设置类A的皮肤为皮肤a就行了。
 4698 +++$+++ dotaforfun +++$+++ 关于刮刮乐的效果
-4699 +++$+++ city +++$+++ 这个还是Canvas级别比较方便，看看这个吧： http://bbs.egret-labs.org/thread-1468-1-1.html
-注意最开始的刮刮乐效果，这是在egret之外的一个Canvas，代码是H5+js级别的，可以直接拿来改。
-4700 +++$+++ ABCD +++$+++ 1.5版本发布完成后要把哪个文件夹里的文件拷贝到服务器...
+4699 +++$+++ city +++$+++ http://bbs.egret-labs.org/thread-1468-1-1.html
+4700 +++$+++ ABCD +++$+++ 1.5版本发布完成后要把哪个文件夹里的文件拷贝到服务器
 4701 +++$+++ 张宇 +++$+++ release里html5里的内容就最终版的。
-你可以把release文件夹先删掉，再发布一次
-4702 +++$+++ ignoremeplz +++$+++ 手里有静态图(png),如何才能生成Egret能使用的影片剪辑
-4703 +++$+++ city +++$+++ 必然使用Egret官方的[Texture Merger] 传送门： http://bbs.egret-labs.org/thread-1653-1-1.html
-
-最终使用方法见官方文档： http://docs.egret-labs.org/post/manual/displaycon/movieclip.html
-
-亲 如已解决问题，请结贴谢谢！
-4704 +++$+++ tanxiaojian +++$+++ 求教，egret如何获得一段时间间隔（要求到毫秒级别）
+4702 +++$+++ ignoremeplz +++$+++ 手里有静态图,如何才能生成Egret能使用的影片剪辑
+4703 +++$+++ city +++$+++ http://docs.egret-labs.org/post/manual/displaycon/movieclip.html
+4704 +++$+++ tanxiaojian +++$+++ 求教，egret如何获得一段时间间隔
 4705 +++$+++ Channing +++$+++ 出现的时候 用nun = egret.getTimer()   记一下时间，   点击的时候 egret.getTimer()-nun，就是你要的毫秒数了
 4706 +++$+++ dotaforfun +++$+++ 可否代码自己创建一个空白纹理？
-4707 +++$+++ city +++$+++ 嗯，目前还不支持位图像素级别的操作，如果确实有这个需求，建议直接从H5+js的级别操作，可参考：
-http://www.w3school.com.cn/tags/canvas_putimagedata.asp
+4707 +++$+++ city +++$+++ http://www.w3school.com.cn/tags/canvas_putimagedata.asp
 4708 +++$+++ .ts +++$+++ EgretWing 代码编辑器需求
-4709 +++$+++ 007 +++$+++ 绑定····帮顶····
+4709 +++$+++ 007 +++$+++ 帮顶
 4710 +++$+++ cbdjob +++$+++ 在物理引擎里，对刚体替换皮肤用的是一种什么机制?
 4711 +++$+++ egret-Jerry +++$+++ 你参照demo，刚体有对应绑定的显示对象
 4712 +++$+++ ignoremeplz +++$+++ 如何保存用户设置
 4713 +++$+++ 张宇 +++$+++ http://bbs.egret-labs.org/thread-1341-1-1.html
-本地储存数据
 4714 +++$+++ phhui +++$+++ libs/core中的东西能改不？
 4715 +++$+++ 7yue +++$+++ core是开源的，可以改动。不过黑屏，应该找人帮你看看是什么问题。
 4716 +++$+++ dotaforfun +++$+++ 关于1.5脏污染的渲染问题
 4717 +++$+++ 7yue +++$+++ 官方那个截图有些问题，就是第二张截图既用到了脏矩形，也用到了webgl
 4718 +++$+++ dotaforfun +++$+++ EditableText有没有相关的例子或者API参考一下
-4719 +++$+++ yicaoyimu +++$+++ 貌似还没加文档，直接看代码实现吧
-https://github.com/egret-labs/egret-core/blob/master/src/extension/gui/components/EditableText.ts
+4719 +++$+++ yicaoyimu +++$+++ https://github.com/egret-labs/egret-core/blob/master/src/extension/gui/components/EditableText.ts
 4720 +++$+++ q734809128 +++$+++ Egret添加对象疑问
-4721 +++$+++ yicaoyimu +++$+++ 是的~~~~~
+4721 +++$+++ yicaoyimu +++$+++ 帮顶
 4722 +++$+++ q734809128 +++$+++ Egret的MovieClip动画
 4723 +++$+++ yicaoyimu +++$+++ this.mc.addEventListener(egret.Event.COMPLETE, this.playEnd, this)
 4724 +++$+++ q734809128 +++$+++ egret分辨率问题
 4725 +++$+++ city +++$+++ 具体说，这跟HTML中代码运行的时序有关，不同的网络环境，会造成页面初始化完毕和Egret代码入口的时序不同。
-以此，在document_class的constructor里，首先侦听egret.Event.ADDED_TO_STAGE，在其处理函数再开始你的程序逻辑是个好习惯，很多有关stage的问题都是没有这样处理造成的。
 4726 +++$+++ .ts +++$+++ EgretWing 启动报错
-4727 +++$+++ dom +++$+++ 因为 npm 安装的方式工具无法读取。你安装在任何位置都可以。并且 npm 安装的也无法定位你的 nodejs 安装在哪了。jre1.7你安装在哪了。这些如果使用一键安装包，就都能确定位置在哪。所以这边不再建议你npm 方式手动安装。你想要切换引擎其实比以前还更简单了：直接替换一键安装包目录下的 egret 文件夹即可。不用再执行一遍 npm 去覆盖掉系统盘里的命令行。而且下个版本会在引擎控制面板里直接集成让你选择引擎文件夹位置的功能 ...
+4727 +++$+++ dom +++$+++ 因为 npm 安装的方式工具无法读取。你安装在任何位置都可以。
 4728 +++$+++ Channing +++$+++ 请教一个关于starlingSwf在GUI中使用的问题。
-4729 +++$+++ dom +++$+++ 是因为 SkinnableContainer 没有皮肤导致的子项显示不出来吧？你用个 Group 来替代 SkinnableContainer。只有需要定制皮肤的时候才用 SkinnableContainer。你给它制作了皮肤就要满足它定义的各种皮肤部件，它的逻辑功能都是依赖皮肤部件的。这里添加子项的逻辑功能就依赖皮肤里的 contentGroup。如果有皮肤但是里面没有 contentGroup 也是不能正常运行的。 ...
+4729 +++$+++ dom +++$+++ 用 Group 来替代 SkinnableContainer。只有需要定制皮肤的时候才用 SkinnableContainer。
 4730 +++$+++ hsduren +++$+++ 在egret中如何集成广告
 4731 +++$+++ 7yue +++$+++ 正在编写百度平台广告的接入教程。
 4732 +++$+++ yanmingjie +++$+++ 在Ubuntu上怎么下载安装egret wing
-4733 +++$+++ dom +++$+++ 是引擎跨平台，开发工具并不跨所有平台。所有开发工具只支持 主流的windows 和 mac。并没有对 Linux 系统的支持，以后也不会有这方面的计划。
+4733 +++$+++ dom +++$+++ 是引擎跨平台，开发工具并不跨所有平台。所有开发工具只支持 主流的windows 和 mac。并没有对 Linux 系统的支持。
 4734 +++$+++ enter334714 +++$+++ 请问RES内置文件类型解析器是在神马情况用的啊
-4735 +++$+++ 张宇 +++$+++ 你创建一个helloworld，里面有RES的用法。解析所有资源都会用到
+4735 +++$+++ 张宇 +++$+++ 创建一个helloworld，里面有RES的用法。解析所有资源都会用到
 4736 +++$+++ danxiaobing2007 +++$+++ 请问EgretWing中的anchor 可以用吗？
 4737 +++$+++ dom +++$+++ anchor 等属性在 Wing 里无法预览。因为 Flash 里没有这个 API。下个版本的 Wing 将会屏蔽这个属性。
 4738 +++$+++ wogooo +++$+++ IE 跨域访问
-4739 +++$+++ eperfect +++$+++ 可以参考一下这篇
-http://bbs.egret-labs.org/thread-2460-1-1.html
+4739 +++$+++ eperfect +++$+++ http://bbs.egret-labs.org/thread-2460-1-1.html
 4740 +++$+++ q734809128 +++$+++ 打包发布出现问题求教
 4741 +++$+++ yicaoyimu +++$+++ egret publish后 在release文件夹没没有吗？
 4742 +++$+++ monkifly +++$+++ Tween.get如果没手动removeTweens会影响回收吗？
@@ -4947,21 +4747,9 @@ http://bbs.egret-labs.org/thread-2460-1-1.html
 4746 +++$+++ monkifly +++$+++ 已经发现内存泄漏，如何查找原因，具体哪泄漏了？
 4747 +++$+++ yicaoyimu +++$+++ Chrome有个Profiles功能 ， 通过截取不同时刻的快照比较
 4748 +++$+++ pow303433732 +++$+++ 想学习后端， 但是没啥概念，求前辈科普一下
-4749 +++$+++ phhui +++$+++ 1、百度“php环境搭建”，然后照着做，然后随便下个正常的PHP源码，放到IIS下运行看看，能访问就正常。IIS不懂的话百度“IIS配置”
-2、后端有很多，只是刚好你知道的都是PHP而已，理解并没错。找一个你觉得比较容易学的，认真学下去就好了，不用去考虑其它的。不知道学哪个好就百度搜索“php,java,c#,python,golang,redis"...相关的了解一下，了解下各自的优缺点然后再做选择。
-3、如果你只是存储个访问数量的话是只要文本就可以了 ...
-4750 +++$+++ pow303433732 +++$+++ 我的项目一上传到服务器运行就会报一个错误请问是怎么.....
-4751 +++$+++ egret-Jerry +++$+++ var colorLabel:egret.TextField = new egret.TextField();
-colorLabel.x = stageW / 2;
-colorLabel.y = stageH / 2 + 50;
-colorLabel.anchorX = colorLabel.anchorY = 0.5;
-colorLabel.textColor = 0xffffff;
-colorLabel.textAlign = "center";
-colorLabel.text = "Hello Egret";
-colorLabel.size = 20;
-this.addChild(colorLabel);
-colorLabel.type = egret.TextFieldType.INPUT;
-新建项目不是有这么一段代码么，加上最后一行 ...
+4749 +++$+++ phhui +++$+++ 谷歌 php环境搭建 
+4750 +++$+++ pow303433732 +++$+++ 我的项目一上传到服务器运行就会报一个错误请问是怎么
+4751 +++$+++ egret-Jerry +++$+++ 帮顶
 4752 +++$+++ matjumbo +++$+++ 有egret的qq交流群么？
 4753 +++$+++ phhui +++$+++ 141578440
 4754 +++$+++ q734809128 +++$+++ Egret移除子项问题
@@ -4970,12 +4758,10 @@ colorLabel.type = egret.TextFieldType.INPUT;
 4757 +++$+++ 7yue +++$+++ 小米2的确有点落后，小米2S还不错，现在一些复杂的html5游戏可以跑到20帧以上了。
 4758 +++$+++ cloudy1982 +++$+++ 关于艺术字体, 大家有没有好的解决方法?
 4759 +++$+++ 张宇 +++$+++ http://bbs.egret-labs.org/thread-90-1-1.html
-fnt字体可以参考我这个帖子
 4760 +++$+++ q734809128 +++$+++ Egret资源加载问题
 4761 +++$+++ dotaforfun +++$+++ 通过ResDepot,将资源分组分为两个loading和preload。那么你先加载loading的资源，加载过程中不显示加载界面，或者显示一个圆圈在不停转(用程序实现的简单加载界面)。加载好这些资源后面的加载再显示资源加载界面。
 4762 +++$+++ q734809128 +++$+++ 运行帧率问题
 4763 +++$+++ yicaoyimu +++$+++ http://bbs.egret-labs.org/thread-2391-1-4.html
-看下这个帖子吧，7yue大大早就说过了
 4764 +++$+++ 天空下的一抹蓝 +++$+++ 如何制作一个声音按钮，点击一下换个皮肤，在点击又换...
 4765 +++$+++ dily3825002 +++$+++ http://bbs.egret-labs.org/thread-1919-1-1.html直接用ts写的toggleButton组件，你看一下就明白了，也可以复制到自己项目中用！
 4766 +++$+++ moe2012 +++$+++ egretvs 无法调试，已使用ie11
@@ -4983,47 +4769,21 @@ fnt字体可以参考我这个帖子
 4768 +++$+++ dotaforfun +++$+++ 用egret开发了一个h5游戏放在微信上玩，奇怪的是。。。。
 4769 +++$+++ 张宇 +++$+++ 微信和egret都不会加广告。应该是网络提供商加的。尤其是小的网络提供商很爱加广告。比如你用长城宽带，这个广告就是长城宽带加的，其他人是看不到的
 4770 +++$+++ tommyZZM +++$+++ 对于一张纸牌，用一张图和用几个显示对象，哪个开销大？
-4771 +++$+++ dily3825002 +++$+++ 1、当然拼接开销大了，但是只是相对而言，总体不太大吧
-2、但是拼接资源小，重复利用率高啊
+4771 +++$+++ dily3825002 +++$+++ 当然拼接开销大了
 4772 +++$+++ q734809128 +++$+++ 关于不同帧率下游戏Bug
-4773 +++$+++ yicaoyimu +++$+++ //角色
-            var role;
-            //墙
-            var ball;
-            //角色矩形范围
-            var roleCheckRec = new egret.Rectangle(role.x, role.y, role.width, role.height);
-            //墙矩形范围
-            var ballCheckRec = new egret.Rectangle(ball.x, ball.y, ball.width, ball.height);
-            egret.Ticker.getInstance().register(function (advancedTime) {
-          ...
+4773 +++$+++ yicaoyimu +++$+++ 可以到QQ群里问。
 4774 +++$+++ msober +++$+++ ts类中的属性名称不能映射Swing组件中ID？？
 4775 +++$+++ hus +++$+++ 你可以在这个类的构造函数里加上this.addEventListener(egret.gui.UIEvent.CREATION_COMPLETE,this.onComplete,this);
-然后在onComplete里console.log(...)试试
 4776 +++$+++ dotaforfun +++$+++ 【新增】增加当屏幕尺寸改变时，重新设置游戏的宽高
-4777 +++$+++ yicaoyimu +++$+++ //处理屏幕大小改变
-    var resizeTimer = null;
-    var doResize = function () {
-        context.stage.changeSize();
-        resizeTimer = null;
-    };
-    window.onresize = function () {
-        if (resizeTimer == null) {
-            resizeTimer = setTimeout(doResize, 300);
-        }
-    };
-
-
-需要最新的引擎代码
+4777 +++$+++ yicaoyimu +++$+++ 处理屏幕大小改变
 4778 +++$+++ 羊教授 +++$+++ Android发布要求版本最低多少？
-4779 +++$+++ xsstomy +++$+++ https://github.com/egret-labs/egret-core亲，可以看看额
+4779 +++$+++ xsstomy +++$+++ https://github.com/egret-labs/egret-core
 4780 +++$+++ uig011330 +++$+++ 想要把一张图片分成N份随机下落的效果
 4781 +++$+++ xsstomy +++$+++ 一张目前做不到，除非把一张图，分成整成n片，然后用工具合成一张纹理集，然后自己按序排版 ，显示成一张整图
 4782 +++$+++ 底部投资 +++$+++ 图片加载不成功，图片显示不出来
-4783 +++$+++ f111fei +++$+++ Res.getRes语句不能找到对应的配置项，是不是应该报错？
-这个问题已经讨论过无数次了，答案是不能报错，报错的话程序就会挂。 Res.getRes会返回一个结果，如果是null就表示找不到这个资源。至于为什么找不到这个资源，请尝试给RES监听ITEM_LOAD_ERROR事件，查看具体的原因。 
-你这个地方图片不能正常显示首先看RES.getRes("wrong");返回的是否为null，如果是则监听ITEM_LOAD_ERROR这个事件看看是不是路径或者配置有问题。 ...
+4783 +++$+++ f111fei +++$+++ 不能报错，报错的话程序就会挂。 
 4784 +++$+++ ks6242420 +++$+++ egret如何实现手指在屏幕滑动画出线条？
-4785 +++$+++ f111fei +++$+++ 仅供参考
+4785 +++$+++ f111fei +++$+++ 可以到QQ群里问。
 4786 +++$+++ thinknovo +++$+++ egret工程可以部署在Tomcat上面吗？
 4787 +++$+++ zphk +++$+++ 直接放到tomcat的webapp/ROOT 目录下
 4788 +++$+++ imgiant +++$+++ Egret在linux服务器上的部署问题
@@ -5034,8 +4794,6 @@ fnt字体可以参考我这个帖子
 4793 +++$+++ yicaoyimu +++$+++ 这个看游戏的设计吧，480*800，640*960的都行吧，没有什么硬性标准吧，考虑到适配就可以了，其实跟手游开发一样的
 4794 +++$+++ loveuall +++$+++ 今天下午突然【微信分享】功能就不好用了
 4795 +++$+++ 孤独之潜行者 +++$+++ 刚刚测试发现，通过微信打开的链接如果不是域名，而是ip地址的话，调用微信分享的接口无效。所以不用太担心，上线的项目应该都是要有域名的。
-
-PS：貌似微信今天中午调整的这个策略，之前用ip地址测试的时候都是没有问题的
 4796 +++$+++ lynseylin +++$+++ 手势缩放图片
 4797 +++$+++ egret-Jerry +++$+++ https://github.com/egret-labs/egret-game-library
 4798 +++$+++ taotao5453 +++$+++ 一个微信横屏应用的旋转问题
@@ -5043,9 +4801,8 @@ PS：貌似微信今天中午调整的这个策略，之前用ip地址测试的�
 4800 +++$+++ innocentjulie +++$+++ Res Depot能不能加个选项，可以选择二级KEY
 4801 +++$+++ dom +++$+++ soga，明白了。
 4802 +++$+++ monkifly +++$+++ 如何在文档类里面判断是由什么设备进入游戏的?
-4803 +++$+++ yicaoyimu +++$+++ var ua = navigator.userAgent.toLowerCase();
-var isIOS = ua.indexOf('ipad') > -1 || ua.indexOf('iphone') > -1;
-4804 +++$+++ wu999ll +++$+++ MovieClip显示不出效果。。
+4803 +++$+++ yicaoyimu +++$+++ navigator.userAgent.toLowerCase()
+4804 +++$+++ wu999ll +++$+++ MovieClip显示不出效果
 4805 +++$+++ city +++$+++ Jerry回答的好像就是问题所在：你动画的坐标，触屏幕了。估计是导出图操作有问题
 4806 +++$+++ jyk1987 +++$+++ 关于Egret Runtime的一些疑问.
 4807 +++$+++ xsstomy +++$+++ 我知道的部分就是，打包会把egretruntime打包进去
@@ -5062,8 +4819,7 @@ var isIOS = ua.indexOf('ipad') > -1 || ua.indexOf('iphone') > -1;
 4818 +++$+++ dotaforfun +++$+++ EditableText点击后输入框可否设置大小
 4819 +++$+++ yjtx +++$+++ 麻烦使用git最新的master分支，已解决此问题。
 4820 +++$+++ junlas +++$+++ 容器Group横向布局的属性，疑惑求解。。。
-4821 +++$+++ f111fei +++$+++ egret.HorizontalAlign.CENTER 水平居中对齐只是相对于容器来说的，现在你的容器就是那个tabGroup的宽度显然是自动测量的，如果要达到你需要的效果请加一句 
-this.tabGroup.percentWidth = 100;
+4821 +++$+++ f111fei +++$+++ 水平居中对齐只是相对于容器来说的，tabGroup的宽度显然是自动测量的
 4822 +++$+++ YYBear +++$+++ 最新版本1.5.0安装无法通过最后一步验证
 4823 +++$+++ f111fei +++$+++ 正常情况下是不需要重启的。 安装完成立即生效。
 4824 +++$+++ YYBear +++$+++ EgretWing安装卡死在0%
@@ -5073,67 +4829,39 @@ this.tabGroup.percentWidth = 100;
 4828 +++$+++ 不是一抹微笑 +++$+++ 求救啊，大家帮帮忙啊
 4829 +++$+++ egret-Jerry +++$+++ 可能是你版本更新出问题了，建议你重新建一个项目，然后把你游戏的代码和资源都拷贝过去，然后再手动改一下DesignSize和屏幕适配策略等属性
 4830 +++$+++ junlas +++$+++ 在wing中设置了对齐方式，可是运行不是想要的结果？
-4831 +++$+++ dom +++$+++ 设置布局的时候注意下你布局的目标对象是谁，必须首先明确这个，不然怎么设置都找不对地方。你最开始设置的上下左右填充100%，设置的对象是List，这里List的尺寸是对的，它已经按你设置的填满List所在父级容器的100%。你所看到的是List里的子项没有填满List。注意这个层级关系。List的布局类是TileLayout，也就是网格布局的，这时候应该是改这个TileLayout上的属性，来调整List里子项的定位排列方式。 ...
+4831 +++$+++ dom +++$+++ 设置布局的时候注意下布局的目标对象是谁
 4832 +++$+++ ktomcat +++$+++ 请教一下，以下代码运行一会后，帧率掉的厉害，Why?
 4833 +++$+++ xsstomy +++$+++ 没有测试过，只是理论饿，实现随鼠标绘制应该是没有问题的吧，毕竟手指没有那么块，enterframe在egret大概是20ms左右，也是就是1秒钟要绘制调用50次，手指拖动不知道有这么快么＝ ＝不过一切都需要事实说话饿
 4834 +++$+++ dotaforfun +++$+++ 白鹭引擎在红米安卓上帧速无法突破20
 4835 +++$+++ hus +++$+++ 这个版本系统浏览器不支持硬件加速，这个问题确实没办法。
 4836 +++$+++ eperfect +++$+++ egret有没有办法脱离WEB服务器运行呢？第三方平台审核不过
-4837 +++$+++ Wander +++$+++ 这个是浏览器的安全设置，Egret无法修改这一点，任何HTML5游戏在加载资源的时候都需要进行资源访问，必须在服务器上进行，如果必须要本地运行，必须修改 浏览器的安全设置，具体可以参考这篇文章
-
-http://www.86rm.com/support/tutorial/2013/0711/204.html
+4837 +++$+++ Wander +++$+++ http://www.86rm.com/support/tutorial/2013/0711/204.html
 4838 +++$+++ liuxuxing0525 +++$+++ egret.UrlLoader跨域访问问题
-4839 +++$+++ f111fei +++$+++ http://bbs.egret-labs.org/thread-108-2-2.html。你参考一下
+4839 +++$+++ f111fei +++$+++ http://bbs.egret-labs.org/thread-108-2-2.html
 4840 +++$+++ junlas +++$+++ 关于gui中嵌套在Group内部的组件，在外部逻辑中如何控制？
 4841 +++$+++ dom +++$+++ 逻辑类上定个同名变量不是更方便吗？你要getChildByName还得自己在声明变量名，然后取出来的还是DisplayObject，还得类型转换。你就定义一个同名变量，强类型的直接开始用多简单啊。在EXML里都已经写好id了为何还要用弱类型的方式去查询一下？
 4842 +++$+++ 343434dfdfd +++$+++ ios打包第三方插件报错
 4843 +++$+++ egret-Jerry +++$+++ document对象在native上都是没有的
 4844 +++$+++ msober +++$+++ 把第三方的JS库 改成TS接口调用
-4845 +++$+++ yicaoyimu +++$+++ 这个问题都在论坛看到好几遍了
-为js文件创建.d.ts接口文件，可参考WeixinAPI.d.ts
-
-[mw_shl_code=java,true]/**
- * Copyright (c) 2014,Egret-Labs.org
- * All rights reserved.
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- *     * Redistributions of source code must retain the above copyright
- *       n ...
+4845 +++$+++ yicaoyimu +++$+++ 为js文件创建.d.ts接口文件，可参考WeixinAPI.d.ts
 4846 +++$+++ wujinhong +++$+++ arrayCollection是Scroller里面DataGroup的数据源，显示不稳定。
 4847 +++$+++ f111fei +++$+++ 出现[Object Object]的原因就是你传入的ArrayCollection里面的数据格式是不正确的。 在ItemRenderer解析的时候，你给labelDisplay.text赋的值不是一个字符串。 检查一下传入的数据源格式以及在OrderItemRender给labelDisplay.text赋值代码，看看是哪个出了问题
 4848 +++$+++ taotao5453 +++$+++ 我做一个微信页面，如何判断用户机型？
-4849 +++$+++ 张宇 +++$+++ var ua = navigator.userAgent.toLowerCase();
-var isIpad = ua.indexOf('ipad') > -1
-var isIphone = ua.indexOf('iphone') > -1;
+4849 +++$+++ 张宇 +++$+++ navigator.userAgent.toLowerCase()
 4850 +++$+++ strom +++$+++ 请问下白鹭引擎如何存储本地的数据
 4851 +++$+++ 张宇 +++$+++ http://bbs.egret-labs.org/thread-1341-1-1.html
-4852 +++$+++ sxtaosdo +++$+++ greensock-js怎么导入到egret工程中,求教~~~~
+4852 +++$+++ sxtaosdo +++$+++ greensock-js怎么导入到egret工程中
 4853 +++$+++ city +++$+++ 之前我说的不全面，这个虽然官方给出了库，但还是外部库，需要手动添加进项目。
-https://github.com/egret-labs/eg ... ee/master/greensock  这是官方给出的项目示例，直接学习这个项目的用法即可
 4854 +++$+++ hungry +++$+++ [跪求指导]导出安卓工程永远是helloworld...
 4855 +++$+++ egret-Jerry +++$+++ 应该是你build有问题，你执行一下egret build -e --runtime native试试
 4856 +++$+++ cloudy1982 +++$+++ 请教如何读取外部XML文档?
-4857 +++$+++ f111fei +++$+++ 不需要你调用parse。RES.getRES(...)取到的已经是一个有xml数据结构的对象了，对象是一个Object类型的。 
-一般来说可能有 localName , name , namespace , text等字段 ， 如果是xml的属性那么字段的开头就是$开头的。
-下面是一个实例
-上面的xml加载进来后，通过Res.getRES取到，得到一个Object类型的对象 ， 或者像jerry说的用字符串加载然后调用XML.parse得到这个Object，下图是这个Object的详细信息
-
-
-
-
-
- ...
+4857 +++$+++ f111fei +++$+++ RES.getRES()
 4858 +++$+++ hungry +++$+++ 关于webSocket的Sec-WebSocket-Protocol
 4859 +++$+++ egret-Jerry +++$+++ 这个引擎没有特殊设置过，都是WebSocket默认值，你看看是不是服务器代码问题，我们自己的服务器没出现这个问题，demo项目也没有这个问题
 4860 +++$+++ junlas +++$+++ 在gui中，能否动态更新舞台的尺寸？
-4861 +++$+++ f111fei +++$+++ 第一个问题： 显示不全是因为你没有约束Label尺寸，导致宽度过小的时候Label的宽度依旧很大。解决办法是设置Label的right和left属性
-
-第二个问题：我觉得你完全没有必要将DesignSize的高度进行一个-25的操作。Egret游戏的高度始终是屏幕的高度，也就是SHOW_ALL。然后，你可以在游戏里面将UIStage的autoSize关掉，然后自己监听Resize事件，让UIStage的height始终为this.stage.stageHeight减去这个div的高。
-获取div的高的代码是 d ...
+4861 +++$+++ f111fei +++$+++ 解决办法是设置Label的right和left属性
 4862 +++$+++ qinghu +++$+++ 如何实现多点触摸
 4863 +++$+++ egret-Jerry +++$+++ https://github.com/egret-labs/egret-game-library
-目前只封装了双击，缩放功能
 4864 +++$+++ yanmingjie +++$+++ Egret DragonBones如何打开使用
 4865 +++$+++ egret-Jerry +++$+++ 看样子你已经安装完了，之后打开骨骼动画的fla文件，然后点击窗口->扩展，里面有DragonBones选项
 4866 +++$+++ 3496696 +++$+++ 我选择了不同的版本，为什么打包不下来啊？
@@ -5145,23 +4873,13 @@ https://github.com/egret-labs/eg ... ee/master/greensock  这是官方给出的�
 4872 +++$+++ fengyun1801 +++$+++ IOS打包后，不能在IOS6上运行
 4873 +++$+++ 7yue +++$+++ 对，iOS6，苹果不提供JSCore的新API调用，没办法了。
 4874 +++$+++ hoddddky +++$+++ 汇总一下遇到几个问题
-4875 +++$+++ yicaoyimu +++$+++ 、theme.thm 为默认皮肤，举个例子，当使用一个Button的标准代码为：
-var btn:egret.gui.Button = new egret.gui.Button();
-btn.skinName = "xxx";
-
-使用theme.thm后，第二行代码就可以省略了，使用theme.thm中配置的皮肤
+4875 +++$+++ yicaoyimu +++$+++ 帮顶
 4876 +++$+++ 不是一抹微笑 +++$+++ 我想让在游戏中插入的动画只播一遍。。代码应该怎么实现
 4877 +++$+++ yicaoyimu +++$+++ http://bbs.egret-labs.org/thread-2436-1-1.html
 4878 +++$+++ ztxxxx +++$+++ egret能实现双屏互动吗？
-4879 +++$+++ sunshine1988 +++$+++ 可以实现 但是这确实跟egret没什么关系。。。
-提供个思路：
-使用websocket （推荐SocketIO）做客户端与服务端的实时通信
-websocket在egret里还没有集成 但是完全可以自己集成嘛 或者不集成 通过事件机制 egret与window下的websocket通信 （自己写个转发）
+4879 +++$+++ sunshine1988 +++$+++ 可以实现
 4880 +++$+++ wchong +++$+++ 如何让游戏程序引用的本地素材，全部换成远程素材
-4881 +++$+++ dily3825002 +++$+++ 两种方式1、服务器允许跨域加载，百度一下就知道了
-2、加载跨域图片
-https://coding.net/u/eger/p/EGER/git/blob/master/%E5%8F%91%E5%B8%83%E6%96%87%E6%A1%A3/0.1.6_Release%20Note.md
-新写了一个类，专门支持，跨域加载图片的
+4881 +++$+++ dily3825002 +++$+++ 服务器允许跨域加载
 4882 +++$+++ lb123 +++$+++ 游戏界面大小修改不了
 4883 +++$+++ egret-Jerry +++$+++ 渲染是OpenGL的
 4884 +++$+++ phhui +++$+++ 资源配置提取问题
@@ -5171,30 +4889,19 @@ https://coding.net/u/eger/p/EGER/git/blob/master/%E5%8F%91%E5%B8%83%E6%96%87%E6%
 4888 +++$+++ dotaforfun +++$+++ 为什么我家里的1.5.1版本无法升级到1.5.2？
 4889 +++$+++ f111fei +++$+++ 你在EgretEngine的第一个界面开启社区体验版，再点击检查更新就行了
 4890 +++$+++ qk123 +++$+++ wing里增加的资源和exml文件在vs里看不见
-4891 +++$+++ zcxp +++$+++ 因为VS不是以文件夹来管理项目的，所以需要多一层的操作。我们也正在做改进。希望能达到这样的效果，现在的解决办法：
-
-
-
-点击工具栏上这个 “显示隐藏文件的按钮”。 就能看到所有文件。
-添加：把新添加的文件 右击 ，在菜单中点击“包括在项目中”。
-
-删除：右击要删除的文件，从项目中排除 ...
+4891 +++$+++ zcxp +++$+++ 因为VS不是以文件夹来管理项目的，所以需要多一层的操作。我们也正在做改进。
 4892 +++$+++ feelinglin +++$+++ Texture.getPixel32() 到底能不能用？
 4893 +++$+++ egret-Jerry +++$+++ RenderTexture可以使用这个方法，Texture暂时不能使用
 4894 +++$+++ 不是一抹微笑 +++$+++ 动画（例如gif格式的动画）怎么写入游戏代码中
 4895 +++$+++ egret-Jerry +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=2718
-你可以先看看这个帖子
 4896 +++$+++ sxtaosdo +++$+++ vs2013编译报错
 4897 +++$+++ zcxp +++$+++ https://visualstudiogallery.msdn.microsoft.com/955e0262-0858-40c9-ab5a-1acc680e9bfd
-
-装一下这个看看
 4898 +++$+++ sxtaosdo +++$+++ greensock中的endArray怎么不好使
 4899 +++$+++ egret-Jerry +++$+++ null
 4900 +++$+++ 天空下的一抹蓝 +++$+++ 如何获得图片的key值，进行判断，从而换不同的图片
 4901 +++$+++ egret-Jerry +++$+++ 第一个参数，不要传texture，传字符串进去，把字符串记下来，然后之后判断+更换
 4902 +++$+++ yukunpeng +++$+++ egret发布h5游戏后，手机用微信或浏览器打开，掉帧很厉害
-4903 +++$+++ egret-Jerry +++$+++ 论坛上有很多关于性能的帖子，你可以搜一下，研究一下
-比如：http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=2969
+4903 +++$+++ egret-Jerry +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=2969
 4904 +++$+++ 不是一抹微笑 +++$+++ 请问怎么做图片忽大忽小的效果
 4905 +++$+++ egret-Jerry +++$+++ 使用egret.Timer，改变图片scale
 4906 +++$+++ qianduan +++$+++ 如何退出服务器
@@ -5204,77 +4911,43 @@ https://coding.net/u/eger/p/EGER/git/blob/master/%E5%8F%91%E5%B8%83%E6%96%87%E6%
 4910 +++$+++ jiuaizxc +++$+++ 关于微信的问题
 4911 +++$+++ codefish +++$+++ 具体看你手机，不同手机分辨率是不一样的，开发者可以看下我的签名，有惊喜
 4912 +++$+++ feelinglin +++$+++ 怎么画扇形
-4913 +++$+++ guoshaorui +++$+++ 参见这里：
-http://www.cnblogs.com/xxcainiao/archive/2009/07/30/1535194.html
-
-换成TypeScript的写法即可
+4913 +++$+++ guoshaorui +++$+++ http://www.cnblogs.com/xxcainiao/archive/2009/07/30/1535194.html
 4914 +++$+++ yanmingjie +++$+++ ProgressBar 属性设置问题
-4915 +++$+++ f111fei +++$+++ GUI项目应当尽量避免直接操作组件的皮肤部件。你设置track的height不起作用是因为皮肤部件track的高度被布局了，具体的关系请看http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=102 。
-
-你这个地方不需要对track进行操作。直接对progressbar的宽高属性进行操作就行了。
-
-labelDisplay也是同理， 外界不要对皮肤部件的属性进行操作。你设置了text无效是因为progressBar设置value会对labelDisplay的text赋值。 progressBar ...
+4915 +++$+++ f111fei +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=102
 4916 +++$+++ zxjellen +++$+++ 设置PopUpManager的modalAlpha
-4917 +++$+++ f111fei +++$+++ 给你个例子参考下
+4917 +++$+++ f111fei +++$+++ 到qq群里直接
 4918 +++$+++ 貮佰伍 +++$+++ Egret可以做类似网站的客户端的App,有多场景的概念没?
 4919 +++$+++ guoshaorui +++$+++ 可能在别的语言里面，场景是实际的类，但在Egret里面场景就是个概念，Egret的显示控制是通过显示列表实现的，了解了显示列表机制，自己是很容易实现场景的功能的
 4920 +++$+++ q734809128 +++$+++ 关于List的问题
-4921 +++$+++ f111fei +++$+++ 自定义ItemRenderer和皮肤 ， 就可以实现。具体的实现方法请参照GUIExample相关demo
-数据量大不会卡，几千条也没关系。
+4921 +++$+++ f111fei +++$+++ 请参照GUIExample相关demo
 4922 +++$+++ cbdjob +++$+++ 如何动态的修改Skin皮肤里的资源
-4923 +++$+++ f111fei +++$+++ 在逻辑组件里面实现一个设置资源的方法或者属性，设置这个属性，对显示资源的皮肤部件进行赋值就行了。
-具体的实现方法请查看Button中icon的实现。
+4923 +++$+++ f111fei +++$+++ 具体的实现方法请查看Button中icon的实现。
 4924 +++$+++ msober +++$+++ stopImmediatePropagation没有效果
 4925 +++$+++ f111fei +++$+++ 请监听TouchEvent.TOUCH_END事件来阻止冒泡，而不是监听TouchEvent.TAP
 4926 +++$+++ 紫竹人士 +++$+++ Lsit列表显示调整
 4927 +++$+++ sunzg6688 +++$+++ list 绑定的数据源 ArrayCollection.moveItemAt(oldIndex,newIndex)
 4928 +++$+++ csujin +++$+++ 怎么生成、读取json文件
-4929 +++$+++ guoshaorui +++$+++ 生成：
-可以手写，不过大部分情况下不需要，比如Egret的资源配置文件，你用ResTool生成就行了，而MovieClip，SpriteSheet所需的JSON配置文件，都是对应的插件来生成的，不需要人工编写
-如果你要运行时生成的话，用JSON.stringify(yourObject)就能生成JSON字符串，不过如何保存就成了问题，在浏览器上，你想保存文件是不可能的，把字符串缓存起来倒有可能性，这个可以查询HTML5的本地缓存用法
-读取：
-如果你把JSON文件写在资源配置 ...
+4929 +++$+++ guoshaorui +++$+++ JSON.stringify(yourObject)
 4930 +++$+++ monkifly +++$+++ IOS APP应用按Home键程序报错是什么问题？
 4931 +++$+++ r2d2 +++$+++ 这个已经解决了，请关闭吧，谢谢
 4932 +++$+++ gtx0023 +++$+++ 现在egret的输入方法是什么？怎么用
 4933 +++$+++ q734809128 +++$+++ 我这么用的
 4934 +++$+++ din +++$+++ egret里的TouchEvent问题
-4935 +++$+++ xsstomy +++$+++ https://github.com/egret-labs/egret-game-library   这是一个第三方支持的库，里面封装了部分，如果你需要那些，可以引入第三方
+4935 +++$+++ xsstomy +++$+++ https://github.com/egret-labs/egret-game-library
 4936 +++$+++ sen228 +++$+++ 音乐播放问题
 4937 +++$+++ city +++$+++ 用 audio对象的 currentTime。pause()时，记录currentTime，play()时，设置currentTime为pause记录的值。
 4938 +++$+++ wangxu825 +++$+++ 关于动画缓动(Tween)过程中的侦听
-4939 +++$+++ xsstomy +++$+++ shp1.addEventListener(egret.Event.ENTER_FRAME,this.onEnterFrame,this);
-private onEnterFrame(evt:egret.Event):void
-{
-     if(evt.target.y == 200)
-     console.log("y = 200");
-}
-试试
+4939 +++$+++ xsstomy +++$+++ 帮顶
 4940 +++$+++ msober +++$+++ List自定义的Item中的按钮点击无效
 4941 +++$+++ featherJ +++$+++ 建议逻辑什么的不要在ItemRenderer里面搞逻辑相关的东西。  ItemRenderer里面监听按钮点击，把事件派发出来。  在List的外部去做逻辑相关的处理。 通过event.target得到ItemRenderer。通过ItemRenderer得到里面的data。
 4942 +++$+++ sean19 +++$+++ 关于xml的android支持
 4943 +++$+++ egret-Jerry +++$+++ native暂时不支持XML，使用json数据吧
 4944 +++$+++ q734809128 +++$+++ 输入框问题
-4945 +++$+++ taotao5453 +++$+++ 好像说反了，下面这个代码是只输入中文的
-var txtChange: Function = function () {
-            txt.text = txt.text.replace(/[^%u4E00-%u9FA5]/g, "");
-        }        var txt: egret.TextField = new egret.TextField;
-        txt.type = egret.TextFieldType.INPUT;
-        txt.addEventListener(egret.Event.CHANGE, txtChange, this);
-        txt.bold = true;
-        txt.x = 50; txt.y = 50; txt.width = 300; txt ...
+4945 +++$+++ taotao5453 +++$+++ 帮顶
 4946 +++$+++ cc1234 +++$+++ 请问eget中二维数组怎么定义？
 4947 +++$+++ A闪 +++$+++ http://bbs.egret-labs.org/thread-424-1-1.html 这篇帖子里面有相关二维数组写法
 4948 +++$+++ dotaforfun +++$+++ MoviceClip好像无法指定在某帧暂停
-4949 +++$+++ din +++$+++ 1.5.3的MovieClip架构重新设计了，gotoAndStop可以指定帧号，详情查看MovieClip.ts源代码
-[mw_shl_code=actionscript3,true]/**
-         * 将播放头移到指定帧并停止
-         * @method egret.MovieClip#gotoAndPlay
-         * @param frame {any} 指定帧的帧号或帧标签
-         */
-        public gotoAndStop(frame: any): void {
-            if (arguments.length != 1) {
-                throw new Error("MovieClip.got ...
+4949 +++$+++ din +++$+++ 详情查看MovieClip.ts源代码
 4950 +++$+++ 文刀三授 +++$+++ 请问下H5游戏一般情况下玩一小时要多少流量呀？
 4951 +++$+++ Once +++$+++ 流量要求和APP差不多的。只不过APP是把资源全部都打包然后给玩家一次性下载，而H5是分段下载，也不排除一次性下载，但大多数都是分阶段下载，所消耗的流量以游戏的资源大小有关，不过H5游戏有缓存，如果你玩H5游戏然后下次玩之前把缓存清除了那还是会重新下载，所以会感觉比APP更耗流量
 4952 +++$+++ joneszhuchinagd +++$+++ egret的显示对象的rotation这个属性精度只能精确到1
@@ -5282,22 +4955,11 @@ var txtChange: Function = function () {
 4954 +++$+++ 小小明 +++$+++ 调试官网提供的GUIExample例子出现错误，解决不了
 4955 +++$+++ f111fei +++$+++ 你的EgretEngine版本是多少？ 要1.5.2以上
 4956 +++$+++ innocentjulie +++$+++ egret 支持拖动么？
-4957 +++$+++ opapa +++$+++ private startGame(){
-    this.theObject.touchEnabled=true;
-    this.theObject.addEventListener(egret.TouchEvent.TOUCH_BEGIN,this.touchObjectBegin,this);
-}
-
-private touchObjectBegin(evt:egret.TouchEvent):void{
-    this.addEventListener(egret.TouchEvent.TOUCH_MOVE,this.touchHandler,this);
-    this.addEventListener(egret.TouchEvent.TOUCH_END,this.touchObjectEnd,this);
-}
-
-private touchObjectEnd(evt:eg ...
+4957 +++$+++ opapa +++$+++ 支持
 4958 +++$+++ lenglang +++$+++ Egret-Android-support 1.5.0打包问题
 4959 +++$+++ r2d2 +++$+++ 请升级到egret android support 1.5.1
 4960 +++$+++ lb123 +++$+++ egret能自定义字体不？
-4961 +++$+++ guoshaorui +++$+++ TTF是不能直接使用的，参考
-http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=90
+4961 +++$+++ guoshaorui +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=90
 4962 +++$+++ 文刀三授 +++$+++ 请问一下有没有黑白格子的源码？
 4963 +++$+++ yanmingjie +++$+++ https://github.com/2386068693/Rect.git
 4964 +++$+++ 小小明 +++$+++ 问一个关于List的滑动滚轴的问题
@@ -5309,9 +4971,7 @@ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=90
 4970 +++$+++ feelinglin +++$+++ MovieClip 点击
 4971 +++$+++ f111fei +++$+++ 1.5.3之前是继承的DisplayObjectContainer，1.5.3是继承的DisplayObject。DisplayObject默认是关闭了toucEnabled的，打开即可
 4972 +++$+++ shawn8688 +++$+++ Tween动画，怎么从中心点开始
-4973 +++$+++ 张宇 +++$+++ 中心点参考这个帖子
-http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=3862
-对象有哪些属性，tween就有哪些属性
+4973 +++$+++ 张宇 +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=3862
 4974 +++$+++ shawn8688 +++$+++ UIAssert无法获取宽度，高度信息
 4975 +++$+++ f111fei +++$+++ GUI里面的组件如果不显式设置尺寸都是需要测量的，测量又是一个延迟验证的过程，再加上如果图片是远程还有一个异步获取的问题。在正常情况下，如果出现了要获取图片宽高的问题，请尝试能否使用自动布局解决你的需求。 如果你一定要获取宽高请参照下面代码：
 4976 +++$+++ coffeg +++$+++ 使用p2引擎碰撞时事件如何产生
@@ -5321,27 +4981,19 @@ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=3862
 4980 +++$+++ T-bag +++$+++ progress 无法执行的问题
 4981 +++$+++ xsstomy +++$+++ 肯定不会执行啊，RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS,this.onProgress,this);是监听的资源加载过程，你屏蔽了加载的步骤RES.loadGroup("x30");  那永远也不会发生这个事件，自然也监听不到，progress肯定不会执行的
 4982 +++$+++ lb123 +++$+++ 手机上响应TOUCH_MOVE事件延迟很大。
-4983 +++$+++ yicaoyimu +++$+++ 刚写了个对TOUCH_MOVE的优化，看看吧，希望对你的项目有所帮助
-http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=5588
+4983 +++$+++ yicaoyimu +++$+++ http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=5588
 4984 +++$+++ 不是一抹微笑 +++$+++ 做好一款游戏，打包发布到手机，背景音乐在手机上播放
 4985 +++$+++ codefish +++$+++ 你可以用不同手机试试看，h5音频支持不太好，开发者可以看看下面我的签名，有惊喜哦
 4986 +++$+++ yanmingjie +++$+++ 怎么去编写图片旋转问题？
 4987 +++$+++ egret-Jerry +++$+++ 中心点用锚点0.5实现，旋转用Tween改变rotation属性
 4988 +++$+++ q734809128 +++$+++ 关于Tween实现原理
-4989 +++$+++ csujin +++$+++ 没看过这里的源码，你的意思是说怕帧率不同的情况下，每帧都加相同的距离，最后位置就会错乱了么？
-在每帧调用的时候，会得到本帧和上一帧的时间间隔的，只需要计算，在某一个时间移动到什么位置就好了，而不是固定每帧加多少的。
-就比如你说的to({x:90,y:90},1000)，如果起始位置在(0,90),那么就会计算，本帧时候已经执行了多长时间，如果是200毫秒，那就在 （90-0）*200/1000=18，即（18，90）的地方，因为帧率是不稳定的，只要 ...
+4989 +++$+++ csujin +++$+++ 看源码
 4990 +++$+++ huangzhoulvbu +++$+++ 关于flash触摸返回当前被点击对象问题
 4991 +++$+++ egret-Jerry +++$+++ 这个和flash一样，添加touch事件，然后回调中获取event.target属性
 4992 +++$+++ 文刀三授 +++$+++ 求助，新手该看那方面的书来学习呀？
-4993 +++$+++ Once +++$+++ 一步一步来。先把基础的语法看一遍。然后做一些小案例，不用纠结学哪个哪种与对比，也可以学相似的JS与AS，AS的例子比较多，可去http://bbs.9ria.com/天地会看看
-JS：http://www.w3cschool.cn/
-AS：《ActionScript3.0殿堂之路》
-文刀可在QQ上找我唠叨唠叨吹吹水哈
+4993 +++$+++ Once +++$+++ http://www.w3cschool.cn/
 4994 +++$+++ 紫竹人士 +++$+++ LIst具体内容显示
-4995 +++$+++ f111fei +++$+++ 下载GUIExample ， 链接 https://github.com/egret-labs/egret-examples/tree/master/GUIExample
-查看List相关的类，里面有例子。
-重点看ListCustomScreen.ts , ListCustomScreenSkin.exml , CustomItemRenderer.ts , CustomItemRendererSkin.exml 这四个文件
+4995 +++$+++ f111fei +++$+++ 看GUIExample
 4996 +++$+++ wsrlyk +++$+++ shape的Touch事件
 4997 +++$+++ eperfect +++$+++ 把shape的touchEnabled设为false，然后在容器里监听点击事件的坐标，根据点击坐标和shape做碰撞检测，这样对性能也不会有影响
 4998 +++$+++ tyl283818296 +++$+++ WebStrom调试问题，看了其他帖子设置还是不会
@@ -5363,12 +5015,9 @@ AS：《ActionScript3.0殿堂之路》
 5014 +++$+++ wujinhong +++$+++ egret添加svg
 5015 +++$+++ 7yue +++$+++ 如果支持也是第三方库，因为移动浏览器对svg的处理能力目前实在是太低下了，稍微复杂一些就不行了。
 5016 +++$+++ shawn8688 +++$+++ movieclip设置anchorX，anchorY没有效果啊
-5017 +++$+++ superlancelot +++$+++ 这是个已知的bug,下个版本会修复
-http://bbs.egret-labs.org/forum. ... 4998&extra=page%3D1
+5017 +++$+++ superlancelot +++$+++ 已知的bug
 5018 +++$+++ din +++$+++ 关于Timer的stop问题
 5019 +++$+++ egret-Jerry +++$+++ 现在最新的master分支已经和flash保持一致了
-每次stop后，再start，不会重新从0开始计数了
-只有调用reset方法才会重新开始计数
 5020 +++$+++ waf1985 +++$+++ EgretWing *.ts 文件打不开
 5021 +++$+++ yicaoyimu +++$+++ 代码编辑使用WebStorm或者其他IDE，现在EgretWing还没有IDE的功能，也许以后会有
 5022 +++$+++ lb123 +++$+++ 话说什么是egret runtime？
@@ -5384,12 +5033,11 @@ http://bbs.egret-labs.org/forum. ... 4998&extra=page%3D1
 5032 +++$+++ stevenisgreat +++$+++ 求助，egret引擎使用，声音在手机中播放不出来
 5033 +++$+++ 张宇 +++$+++ 要加载完这个声音。点击某个按钮以后，再播放
 5034 +++$+++ 天空下的一抹蓝 +++$+++ 怎么在代码里面改变后来加的东西的层级关系
-5035 +++$+++ featherJ +++$+++ GUI体系里添加的东西比如是UIComponent或者他的子类。  如果你想添加，需要继承自gui组件去写。  如果你添加的不是gui的东西，可以用UIAsset的source，赋值成你想显示的displayobject。  如果你是游戏逻辑的部分，最好不要忘gui里添加。   如果你需要添加到某一层指定位置。  比较方便的方法是可以在skin里的指定位置设置一个group，然后在逻辑组件里写好与他绑定的group。  当partAdd之后，直接往这个组里添加。 ...
+5035 +++$+++ featherJ +++$+++ GUI体系里添加的东西比如是UIComponent或者他的子类。
 5036 +++$+++ fatsnake +++$+++ 谁有Egret读取JSSDK PHP 返回值的例子？
-5037 +++$+++ adonishong +++$+++ 1. 是的，域名必须要备案
-2. 备案以后要到公众号里面绑定这个域名
+5037 +++$+++ adonishong +++$+++ 域名必须要备案
 5038 +++$+++ q734809128 +++$+++ 输入框问题
-5039 +++$+++ yicaoyimu +++$+++ CSS确实不通，等高手解决吧~~~~
+5039 +++$+++ yicaoyimu +++$+++ CSS确实不通，等高手解决吧
 5040 +++$+++ lb123 +++$+++ egret手机声音问题。
 5041 +++$+++ codefish +++$+++ h5的声音兼容性好像不太好
 5042 +++$+++ liwei2633 +++$+++ 新人求助！关于图片资源解析问题
@@ -5400,7 +5048,6 @@ http://bbs.egret-labs.org/forum. ... 4998&extra=page%3D1
 5047 +++$+++ egret-Jerry +++$+++ 如果楼主着急用，现在master分支已经解决这个问题了
 5048 +++$+++ blaji +++$+++ 关于文字颜色的问题
 5049 +++$+++ egret-Jerry +++$+++ http://docs.egret-labs.org/jkdoc/manual-text-multiformat.html
-可以看下这个文档
 5050 +++$+++ zcredboy +++$+++ 游戏正常运行，但死活无法打包
 5051 +++$+++ city +++$+++ 开发者自己结贴：我找到原因了  用批处理编译没显示错误信息，用命令行编译就爆出错误信息了，改掉就好了
 5052 +++$+++ junlas +++$+++ 我的网站终于适配所有设备了，关于gui还有个疑惑？
