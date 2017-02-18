@@ -2913,7 +2913,7 @@
 2912 +++$+++ risker +++$+++ 第三js方库引用egret模块，编译出错
 2913 +++$+++ guoshaorui +++$+++ 在你其他项目里，应该能找到egret.d.ts和game.d.ts，把这两个文件拷贝到你的库项目的libs目录下
 2914 +++$+++ 李嘉俊懿 +++$+++ TextureMerger 生成的json格式问题
-2915 +++$+++ xsstomy +++$+++http://edn.egret.com/cn/index.php/article/index/id/596
+2915 +++$+++ xsstomy +++$+++ http://edn.egret.com/cn/index.php/article/index/id/596
 2916 +++$+++ 叮当Q版 +++$+++ 我只想new一个eui的exml 为啥这么难！
 2917 +++$+++ dom +++$+++ 看一下浏览器的控制台，有没报错信息，根据报错信息很容易就找到问题了。你这个不显示一般就两种情况：1.exml的相对路径是错的，如果错的控制台会输出加载失败的信息的。2.exml里引用的图片资源都没放到RES的配置里。皮肤是显示出来了，可能是因为没有显示出图片，同样是看一下控制台有没资源加载失败的错误信息。 ...
 2918 +++$+++ rabee +++$+++ egret 2.0.5如何显示fps
