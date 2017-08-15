@@ -1,3 +1,7 @@
+# 重要提示
+训练机器学习模型，评测算法和交流，可以使用另外一个质量更好的语料库了 -
+[机器学习保险行业问答开放数据集](https://github.com/Samurais/insuranceqa-corpus-zh)
+
 # Egret Wenda Corpus
 中文问答语料
 
