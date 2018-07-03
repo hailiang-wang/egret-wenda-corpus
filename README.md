@@ -2,6 +2,11 @@
 训练机器学习模型，评测算法和交流，可以使用另外一个质量更好的语料库了 -
 [机器学习保险行业问答开放数据集](https://github.com/Samurais/insuranceqa-corpus-zh)
 
+[![chatoper banner][co-banner-image]][co-url]
+
+[co-banner-image]: https://user-images.githubusercontent.com/3538629/42217321-3d5e44f6-7ef7-11e8-94e7-1574bfa1dbb8.png
+[co-url]: https://www.chatopera.com
+
 # Egret Wenda Corpus
 中文问答语料
 
